@@ -1,0 +1,116 @@
+@import 'tailwindcss';
+
+/* Design tokens – đổi tại đây để đổi nhận diện */
+@theme {
+  --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+
+  /* Tông đỏ – vàng lấy cảm hứng từ cờ đỏ sao vàng */
+  --color-canvas: #fbf7f2;
+  --color-surface: #ffffff;
+  --color-ink: #241614;
+  --color-muted: #6f5e59;
+  --color-line: #eee3dc;
+
+  --color-brand-50: #fff1ef;
+  --color-brand-100: #ffdcd6;
+  --color-brand-500: #e0301e;
+  --color-brand-600: #da251d;
+  --color-brand-700: #b3141c;
+  --color-brand-900: #5e0b10;
+
+  --color-gold-50: #fff9e6;
+  --color-gold-100: #fff0bf;
+  --color-gold-200: #ffe38a;
+  --color-gold-300: #ffd84d;
+  --color-gold-400: #ffcd00;
+  --color-gold-500: #e6b400;
+  --color-gold-700: #8a6400;
+
+  --color-food: #d9622b;
+  --color-cafe: #8a5a3b;
+  --color-sight: #2f6fb3;
+  --color-fun: #8a4fbf;
+
+  --color-ok: #23804a;
+  --color-warn: #a36a00;
+  --color-danger: #c0392b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Focus rõ ràng cho bàn phím */
+:focus-visible {
+  outline: 3px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Marker bản đồ (DOM element do MapView tạo) */
+.map-marker {
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  border: 2px solid #fff;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.28);
+  transition: transform 0.15s ease;
+}
+.map-marker:hover,
+.map-marker[data-highlight='true'] {
+  transform: scale(1.18);
+}
+.map-marker[aria-pressed='true'] {
+  transform: scale(1.35);
+  box-shadow:
+    0 0 0 4px rgb(255 205 0 / 0.55),
+    0 3px 10px rgb(0 0 0 / 0.35);
+  z-index: 3;
+}
+.map-marker[data-category='food'] { background: var(--color-food); }
+.map-marker[data-category='cafe'] { background: var(--color-cafe); }
+.map-marker[data-category='sight'] { background: var(--color-sight); }
+.map-marker[data-category='fun'] { background: var(--color-fun); }
+.map-marker[data-numbered='true'] {
+  width: 36px;
+  height: 36px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--color-brand-700);
+  border-width: 3px;
+}
+.map-marker[data-unverified='true'] {
+  border-style: dashed;
+}
+.user-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #2563eb;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 7px rgb(37 99 235 / 0.22);
+}

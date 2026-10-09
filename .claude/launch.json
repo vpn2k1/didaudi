@@ -1,0 +1,38 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "be",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "be",
+        "run",
+        "dev"
+      ],
+      "port": 4000
+    },
+    {
+      "name": "fe",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "fe",
+        "run",
+        "dev"
+      ],
+      "port": 5173
+    },
+    {
+      "name": "web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "web",
+        "run",
+        "dev"
+      ],
+      "port": 3000
+    }
+  ]
+}

@@ -1,0 +1,2530 @@
+[
+  {
+    "id": "ho-hoan-kiem",
+    "slug": "ho-hoan-kiem",
+    "name": "Hồ Hoàn Kiếm (Hồ Gươm)",
+    "description": "Trái tim Hà Nội với Tháp Rùa, cầu Thê Húc. Cuối tuần quanh hồ có không gian phố đi bộ.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "Phố Đinh Tiên Hoàng, Hoàn Kiếm",
+    "latitude": 21.028799,
+    "longitude": 105.852371,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "ho",
+      "lich-su",
+      "pho-di-bo"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": true,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "relation/198437",
+        "label": "Hồ Hoàn Kiếm"
+      }
+    ],
+    "osmHint": {
+      "match": "Hồ Hoàn Kiếm"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "den-ngoc-son",
+    "slug": "den-ngoc-son",
+    "name": "Đền Ngọc Sơn",
+    "description": "Ngôi đền trên đảo Ngọc, đi qua cầu Thê Húc sơn đỏ.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "Đinh Tiên Hoàng, Hoàn Kiếm",
+    "latitude": 21.03073,
+    "longitude": 105.852376,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "lich-su",
+      "tam-linh",
+      "ho"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/178995262",
+        "label": "Đền Ngọc Sơn"
+      }
+    ],
+    "osmHint": {
+      "match": "Đền Ngọc Sơn"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "van-mieu",
+    "slug": "van-mieu",
+    "name": "Văn Miếu – Quốc Tử Giám",
+    "description": "Trường đại học đầu tiên của Việt Nam (1076), có 82 bia tiến sĩ.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Văn Miếu",
+    "address": "58 Quốc Tử Giám, Đống Đa",
+    "latitude": 21.0288,
+    "longitude": 105.836001,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "lich-su",
+      "van-hoa"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": true,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "relation/21422528",
+        "label": "Văn Miếu - Quốc Tử Giám"
+      }
+    ],
+    "osmHint": {
+      "match": "Văn Miếu"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "lang-bac",
+    "slug": "lang-bac",
+    "name": "Lăng Chủ tịch Hồ Chí Minh",
+    "description": "Quảng trường Ba Đình và Lăng Bác. Nên kiểm tra lịch mở cửa trước khi đến và mặc trang phục lịch sự.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Ba Đình",
+    "address": "2 Hùng Vương, Ba Đình",
+    "latitude": 21.036762,
+    "longitude": 105.834692,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "lich-su"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/37625751",
+        "label": "Lăng Chủ tịch Hồ Chí Minh"
+      }
+    ],
+    "osmHint": {
+      "match": "Lăng Chủ tịch Hồ Chí Minh"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "chua-mot-cot",
+    "slug": "chua-mot-cot",
+    "name": "Chùa Một Cột",
+    "description": "Ngôi chùa hình bông sen độc đáo xây từ thời Lý (1049).",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Ba Đình",
+    "address": "Chùa Một Cột, Ba Đình",
+    "latitude": 21.035856,
+    "longitude": 105.833614,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "lich-su",
+      "tam-linh"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/697326496",
+        "label": "Chùa Một Cột"
+      }
+    ],
+    "osmHint": {
+      "match": "Chùa Một Cột"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "hoang-thanh",
+    "slug": "hoang-thanh",
+    "name": "Hoàng thành Thăng Long",
+    "description": "Di sản thế giới UNESCO, trung tâm quyền lực qua nhiều triều đại.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Ba Đình",
+    "address": "19C Hoàng Diệu, Ba Đình",
+    "latitude": 21.036289,
+    "longitude": 105.840442,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "lich-su",
+      "van-hoa"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": true,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "relation/21425205",
+        "label": "Hoàng thành Thăng Long"
+      }
+    ],
+    "osmHint": {
+      "match": "Hoàng thành Thăng Long"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cot-co",
+    "slug": "cot-co",
+    "name": "Cột cờ Hà Nội",
+    "description": "Kỳ đài xây năm 1812, một trong những biểu tượng của Hà Nội.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Ba Đình",
+    "address": "28A Điện Biên Phủ, Ba Đình",
+    "latitude": 21.032591,
+    "longitude": 105.839826,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "lich-su"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/184959290",
+        "label": "Cột cờ Hà Nội"
+      }
+    ],
+    "osmHint": {
+      "match": "Cột cờ Hà Nội"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "nha-tho-lon",
+    "slug": "nha-tho-lon",
+    "name": "Nhà thờ Lớn Hà Nội",
+    "description": "Nhà thờ kiến trúc Gothic (1886). Quanh đây nhiều quán trà chanh, cà phê.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "40 Nhà Chung, Hoàn Kiếm",
+    "latitude": 21.028659,
+    "longitude": 105.848851,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "kien-truc",
+      "tam-linh"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/28912942",
+        "label": "Nhà thờ Lớn"
+      }
+    ],
+    "osmHint": {
+      "match": "Nhà thờ Lớn"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "nha-hat-lon",
+    "slug": "nha-hat-lon",
+    "name": "Nhà hát Lớn Hà Nội",
+    "description": "Kiến trúc Pháp đầu thế kỷ 20, thường có các buổi biểu diễn nghệ thuật.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Tràng Tiền",
+    "address": "1 Tràng Tiền, Hoàn Kiếm",
+    "latitude": 21.024193,
+    "longitude": 105.857825,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "kien-truc",
+      "van-hoa"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/37933050",
+        "label": "Nhà hát Lớn"
+      }
+    ],
+    "osmHint": {
+      "match": "Nhà hát Lớn"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "hoa-lo",
+    "slug": "hoa-lo",
+    "name": "Di tích Nhà tù Hỏa Lò",
+    "description": "Nhà tù do Pháp xây năm 1896, nay là di tích lịch sử.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Hoàn Kiếm",
+    "address": "1 Hỏa Lò, Hoàn Kiếm",
+    "latitude": 21.025376,
+    "longitude": 105.846427,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "lich-su",
+      "bao-tang"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/340128580",
+        "label": "Nhà tù Hỏa Lò"
+      }
+    ],
+    "osmHint": {
+      "match": "Hỏa Lò"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bt-lich-su",
+    "slug": "bt-lich-su",
+    "name": "Bảo tàng Lịch sử Quốc gia",
+    "description": "Hiện vật từ thời tiền sử đến hiện đại, toà nhà kiến trúc Đông Dương.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Tràng Tiền",
+    "address": "1 Tràng Tiền, Hoàn Kiếm",
+    "latitude": 21.024243,
+    "longitude": 105.859716,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "bao-tang",
+      "lich-su"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/37933256",
+        "label": "Bảo tàng Lịch sử Quốc gia Việt Nam"
+      }
+    ],
+    "osmHint": {
+      "match": "Bảo tàng Lịch sử"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bt-dan-toc-hoc",
+    "slug": "bt-dan-toc-hoc",
+    "name": "Bảo tàng Dân tộc học Việt Nam",
+    "description": "Văn hóa 54 dân tộc, có khu trưng bày nhà truyền thống ngoài trời.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Cầu Giấy",
+    "address": "Nguyễn Văn Huyên, Cầu Giấy",
+    "latitude": 21.040394,
+    "longitude": 105.798837,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "bao-tang",
+      "van-hoa"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/339936730",
+        "label": "Bảo tàng Dân tộc học Việt Nam"
+      }
+    ],
+    "osmHint": {
+      "match": "Bảo tàng Dân tộc học"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bt-phu-nu",
+    "slug": "bt-phu-nu",
+    "name": "Bảo tàng Phụ nữ Việt Nam",
+    "description": "Trưng bày về phụ nữ Việt Nam: gia đình, lịch sử, thời trang.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Hoàn Kiếm",
+    "address": "36 Lý Thường Kiệt, Hoàn Kiếm",
+    "latitude": 21.023402,
+    "longitude": 105.851603,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "bao-tang",
+      "van-hoa"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/704147278",
+        "label": "Bảo tàng Phụ nữ Việt Nam"
+      }
+    ],
+    "osmHint": {
+      "match": "Bảo tàng Phụ nữ"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bt-my-thuat",
+    "slug": "bt-my-thuat",
+    "name": "Bảo tàng Mỹ thuật Việt Nam",
+    "description": "Tranh sơn mài, lụa, điêu khắc qua các thời kỳ.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Ba Đình",
+    "address": "66 Nguyễn Thái Học, Ba Đình",
+    "latitude": 21.030653,
+    "longitude": 105.837032,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "bao-tang",
+      "nghe-thuat"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "relation/21425134",
+        "label": "Bảo tàng Mỹ thuật Việt Nam"
+      }
+    ],
+    "osmHint": {
+      "match": "Bảo tàng Mỹ thuật"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "chua-tran-quoc",
+    "slug": "chua-tran-quoc",
+    "name": "Chùa Trấn Quốc",
+    "description": "Ngôi chùa cổ nhất Hà Nội (hơn 1.500 năm) bên Hồ Tây, đẹp lúc hoàng hôn.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Hồ Tây",
+    "address": "Thanh Niên, Tây Hồ",
+    "latitude": 21.0479,
+    "longitude": 105.83676,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "tam-linh",
+      "lich-su",
+      "ho"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": true,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/220302249",
+        "label": "Chùa Trấn Quốc"
+      }
+    ],
+    "osmHint": {
+      "match": "Chùa Trấn Quốc"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "phu-tay-ho",
+    "slug": "phu-tay-ho",
+    "name": "Phủ Tây Hồ",
+    "description": "Nơi thờ Mẫu nổi tiếng. Ngay ngoài cổng có bánh tôm, ốc bên hồ.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Hồ Tây",
+    "address": "Ngõ 52 Đặng Thai Mai, Tây Hồ",
+    "latitude": 21.055556,
+    "longitude": 105.819719,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "tam-linh",
+      "ho"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/941901613",
+        "label": "Phủ Tây Hồ"
+      }
+    ],
+    "osmHint": {
+      "match": "Phủ Tây Hồ"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "den-quan-thanh",
+    "slug": "den-quan-thanh",
+    "name": "Đền Quán Thánh",
+    "description": "Một trong Thăng Long tứ trấn, có tượng Huyền Thiên Trấn Vũ bằng đồng.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Hồ Tây",
+    "address": "190 Quán Thánh, Ba Đình",
+    "latitude": 21.04303,
+    "longitude": 105.836588,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "tam-linh",
+      "lich-su"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/207178320",
+        "label": "Đền Quán Thánh"
+      }
+    ],
+    "osmHint": {
+      "match": "Đền Quán Thánh"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cau-long-bien",
+    "slug": "cau-long-bien",
+    "name": "Cầu Long Biên",
+    "description": "Cây cầu thép hơn 100 năm tuổi. Đi bộ ngắm sông Hồng lúc hoàng hôn.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Long Biên",
+    "address": "Cầu Long Biên, Hoàn Kiếm",
+    "latitude": 21.043161,
+    "longitude": 105.858199,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "kien-truc",
+      "lich-su",
+      "song-ao"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/28366870",
+        "label": "Cầu Long Biên"
+      }
+    ],
+    "osmHint": {
+      "match": "Cầu Long Biên"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cho-dong-xuan",
+    "slug": "cho-dong-xuan",
+    "name": "Chợ Đồng Xuân",
+    "description": "Chợ lớn nhất phố cổ, khu bán buôn sầm uất từ đầu thế kỷ 20.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "Đồng Xuân, Hoàn Kiếm",
+    "latitude": 21.038242,
+    "longitude": 105.849673,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "cho",
+      "mua-sam"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/1212230635",
+        "label": "Chợ Đồng Xuân"
+      }
+    ],
+    "osmHint": {
+      "match": "Chợ Đồng Xuân"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "o-quan-chuong",
+    "slug": "o-quan-chuong",
+    "name": "Ô Quan Chưởng",
+    "description": "Cửa ô cuối cùng còn sót lại của thành Thăng Long.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "Phố Ô Quan Chưởng, Hoàn Kiếm",
+    "latitude": 21.037331,
+    "longitude": 105.852198,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "lich-su",
+      "kien-truc"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/700627452",
+        "label": "Ô Quan Chưởng"
+      }
+    ],
+    "osmHint": {
+      "match": "Ô Quan Chưởng"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "nha-co-ma-may",
+    "slug": "nha-co-ma-may",
+    "name": "Nhà cổ 87 Mã Mây",
+    "description": "Ngôi nhà ống cổ điển hình của phố cổ cuối thế kỷ 19.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "87 Mã Mây, Hoàn Kiếm",
+    "latitude": 21.0346,
+    "longitude": 105.8536,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "kien-truc",
+      "van-hoa"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "87 Mã Mây|Nhà cổ|Ancient House",
+      "radius": 300
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "pho-sach",
+    "slug": "pho-sach",
+    "name": "Phố sách Hà Nội (19/12)",
+    "description": "Phố đi bộ toàn sách và cà phê sách, yên tĩnh giữa trung tâm.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Hoàn Kiếm",
+    "address": "Phố 19 Tháng 12, Hoàn Kiếm",
+    "latitude": 21.024933,
+    "longitude": 105.847861,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "van-hoa",
+      "pho-di-bo"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/1510802054",
+        "label": "Phố Sách Hà Nội"
+      }
+    ],
+    "osmHint": {
+      "match": "Phố sách",
+      "street": true
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cong-vien-thong-nhat",
+    "slug": "cong-vien-thong-nhat",
+    "name": "Công viên Thống Nhất",
+    "description": "Công viên lớn với hồ Bảy Mẫu, hợp đi dạo và tập thể dục.",
+    "mustTry": null,
+    "category": "fun",
+    "provinceSlug": "ha-noi",
+    "area": "Hai Bà Trưng",
+    "address": "354A Lê Duẩn, Hai Bà Trưng",
+    "latitude": 21.012508,
+    "longitude": 105.844525,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "cong-vien",
+      "ho"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/37933849",
+        "label": "Công viên Thống Nhất"
+      }
+    ],
+    "osmHint": {
+      "match": "^Công viên Thống Nhất"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "lotte-observation",
+    "slug": "lotte-observation",
+    "name": "Lotte Observation Deck",
+    "description": "Đài quan sát tầng 65, ngắm toàn cảnh Hà Nội.",
+    "mustTry": null,
+    "category": "fun",
+    "provinceSlug": "ha-noi",
+    "area": "Ba Đình",
+    "address": "54 Liễu Giai, Ba Đình",
+    "latitude": 21.032273,
+    "longitude": 105.812606,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 2,
+    "tags": [
+      "view-dep"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/727570329",
+        "label": "Lotte Center Hanoi"
+      }
+    ],
+    "osmHint": {
+      "match": "Lotte Center"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bat-trang",
+    "slug": "bat-trang",
+    "name": "Làng gốm Bát Tràng",
+    "description": "Làng gốm hơn 500 năm, có các xưởng cho khách tự tay nặn gốm.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Ngoại thành",
+    "address": "Bát Tràng, Gia Lâm",
+    "latitude": 20.976,
+    "longitude": 105.912,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "lang-nghe",
+      "van-hoa"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Chợ Gốm|Làng gốm Bát Tràng|Bat Trang Ceramic"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "duong-lam",
+    "slug": "duong-lam",
+    "name": "Làng cổ Đường Lâm",
+    "description": "Làng cổ đá ong, cách trung tâm khoảng 45km. Nổi tiếng chè lam, gà Mía.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ha-noi",
+    "area": "Ngoại thành",
+    "address": "Đường Lâm, Sơn Tây",
+    "latitude": 21.158467,
+    "longitude": 105.470445,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "lang-co",
+      "van-hoa"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/1193800376",
+        "label": "Đình Mông Phụ"
+      }
+    ],
+    "osmHint": {
+      "match": "Mông Phụ|Làng cổ Đường Lâm"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "pho-bat-dan",
+    "slug": "pho-bat-dan",
+    "name": "Phở Gia Truyền Bát Đàn",
+    "description": "Quán phở xếp hàng nổi tiếng, tự bưng bê. Nước dùng trong, ngọt xương.",
+    "mustTry": "Phở bò tái nạm",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "49 Bát Đàn, Hoàn Kiếm",
+    "latitude": 21.033638,
+    "longitude": 105.846379,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "pho"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/5116302421",
+        "label": "Phở Gia Truyền"
+      }
+    ],
+    "osmHint": {
+      "match": "Phở Gia Truyền|Phở Bát Đàn|Pho Bat Dan|Phở 49"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "pho-thin",
+    "slug": "pho-thin",
+    "name": "Phở Thìn Lò Đúc",
+    "description": "Phở tái lăn xào tỏi thơm nồng, nước béo. Một trong các quán lâu đời nhất.",
+    "mustTry": "Phở bò tái lăn",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Hai Bà Trưng",
+    "address": "13 Lò Đúc, Hai Bà Trưng",
+    "latitude": 21.018178,
+    "longitude": 105.8553,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "pho"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": true,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/5334178022",
+        "label": "Quán Phở Thìn"
+      }
+    ],
+    "osmHint": {
+      "match": "Phở Thìn"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "pho-10-ly-quoc-su",
+    "slug": "pho-10-ly-quoc-su",
+    "name": "Phở 10 Lý Quốc Sư",
+    "description": "Thương hiệu phở quen thuộc gần Nhà thờ Lớn.",
+    "mustTry": "Phở tái chín",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "10 Lý Quốc Sư, Hoàn Kiếm",
+    "latitude": 21.030472,
+    "longitude": 105.848847,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "pho"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/773601261",
+        "label": "Pho 10"
+      }
+    ],
+    "osmHint": {
+      "match": "Phở 10|Pho 10"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "pho-khoi-hoi",
+    "slug": "pho-khoi-hoi",
+    "name": "Phở Khôi Hói",
+    "description": "Quán phở bình dân lâu năm trong phố cổ.",
+    "mustTry": "Phở bò nạm gầu",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "50 Hàng Vải, Hoàn Kiếm",
+    "latitude": 21.0365,
+    "longitude": 105.8476,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "pho"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Khôi Hói|Khoi Hoi"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "pho-suong",
+    "slug": "pho-suong",
+    "name": "Phở Sướng",
+    "description": "Quán nhỏ trong ngõ, nước dùng đậm, nhiều người Hà Nội chọn.",
+    "mustTry": "Phở bò tái chín",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "24B Ngõ Trung Yên, Hoàn Kiếm",
+    "latitude": 21.033552,
+    "longitude": 105.852143,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "pho"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/4905672622",
+        "label": "Phở Sướng"
+      }
+    ],
+    "osmHint": {
+      "match": "Phở Sướng"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bun-cha-huong-lien",
+    "slug": "bun-cha-huong-lien",
+    "name": "Bún chả Hương Liên",
+    "description": "Nổi tiếng thế giới sau chuyến ghé thăm của Tổng thống Obama năm 2016.",
+    "mustTry": "Combo Obama (bún chả + nem hải sản + bia)",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Hai Bà Trưng",
+    "address": "24 Lê Văn Hưu, Hai Bà Trưng",
+    "latitude": 21.01805,
+    "longitude": 105.853884,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "bun-cha"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": true,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/4272727197",
+        "label": "Cửa Hàng Bún Chả Hương Liên"
+      }
+    ],
+    "osmHint": {
+      "match": "Hương Liên"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bun-cha-dac-kim",
+    "slug": "bun-cha-dac-kim",
+    "name": "Bún chả Đắc Kim",
+    "description": "Bún chả phố cổ lâu đời, chả miếng to, nướng than hoa.",
+    "mustTry": "Bún chả + nem cua bể",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "1 Hàng Mành, Hoàn Kiếm",
+    "latitude": 21.032325,
+    "longitude": 105.84807,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 2,
+    "tags": [
+      "bun-cha"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/6957667188",
+        "label": "Bún Chả Đắc Kim"
+      }
+    ],
+    "osmHint": {
+      "match": "Đắc Kim"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bun-cha-tuyet",
+    "slug": "bun-cha-tuyet",
+    "name": "Bún chả Tuyết 34",
+    "description": "Bún chả với chả kẹp que tre nướng than.",
+    "mustTry": "Bún chả que tre",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Ba Đình",
+    "address": "34 Hàng Than, Ba Đình",
+    "latitude": 21.0425,
+    "longitude": 105.847,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "bun-cha"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Bún chả Tuyết|Bun Cha Tuyet",
+      "radius": 300
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cha-ca-la-vong",
+    "slug": "cha-ca-la-vong",
+    "name": "Chả cá Lã Vọng",
+    "description": "Quán đã đặt tên cho cả phố Chả Cá, món chả cá nghệ ăn với bún, mắm tôm.",
+    "mustTry": "Chả cá lăng thì là",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "14 Chả Cá, Hoàn Kiếm",
+    "latitude": 21.035684,
+    "longitude": 105.849152,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 3,
+    "tags": [
+      "cha-ca"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/11491397157",
+        "label": "Chả Cá Lã Vọng"
+      }
+    ],
+    "osmHint": {
+      "match": "Lã Vọng"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cha-ca-thang-long",
+    "slug": "cha-ca-thang-long",
+    "name": "Chả cá Thăng Long",
+    "description": "Lựa chọn chả cá phổ biến, phục vụ nhanh, không gian rộng.",
+    "mustTry": "Chả cá lăng",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "21 Đường Thành, Hoàn Kiếm",
+    "latitude": 21.032965,
+    "longitude": 105.846123,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 2,
+    "tags": [
+      "cha-ca"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/11491405059",
+        "label": "Chả Cá Thăng Long"
+      }
+    ],
+    "osmHint": {
+      "match": "Chả Cá Thăng Long"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "banh-mi-25",
+    "slug": "banh-mi-25",
+    "name": "Bánh mì 25",
+    "description": "Bánh mì được khách du lịch yêu thích, có menu tiếng Anh.",
+    "mustTry": "Bánh mì pate thập cẩm",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "25 Hàng Cá, Hoàn Kiếm",
+    "latitude": 21.03608,
+    "longitude": 105.848693,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "banh-mi"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/3514125539",
+        "label": "Bánh Mì 25"
+      }
+    ],
+    "osmHint": {
+      "match": "Bánh Mì 25"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bun-thang-ba-duc",
+    "slug": "bun-thang-ba-duc",
+    "name": "Bún thang Bà Đức",
+    "description": "Bún thang cầu kỳ đúng kiểu Hà Nội xưa: gà xé, trứng tráng, giò lụa.",
+    "mustTry": "Bún thang",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "48 Cầu Gỗ, Hoàn Kiếm",
+    "latitude": 21.0329,
+    "longitude": 105.853,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "bun"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Bà Đức|Ba Duc"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bun-bo-nam-bo",
+    "slug": "bun-bo-nam-bo",
+    "name": "Bún bò Nam Bộ Bách Phương",
+    "description": "Bún trộn bò xào, rau thơm, lạc rang, hành phi.",
+    "mustTry": "Bún bò Nam Bộ",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "67 Hàng Điếu, Hoàn Kiếm",
+    "latitude": 21.032245,
+    "longitude": 105.846782,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "bun"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/4557999389",
+        "label": "Bách Phương - Bún Bò Nam Bộ"
+      }
+    ],
+    "osmHint": {
+      "match": "Bún bò Nam Bộ"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "mien-luon-dong-thinh",
+    "slug": "mien-luon-dong-thinh",
+    "name": "Miến lươn Đông Thịnh",
+    "description": "Lươn chiên giòn, miến dong, nước dùng ngọt.",
+    "mustTry": "Miến lươn trộn / nước",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "87 Hàng Điếu, Hoàn Kiếm",
+    "latitude": 21.031853,
+    "longitude": 105.846905,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "mien"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/4381924889",
+        "label": "Miến Lươn Đông Thịnh"
+      }
+    ],
+    "osmHint": {
+      "match": "Miến lươn"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bun-dau-hang-khay",
+    "slug": "bun-dau-hang-khay",
+    "name": "Bún đậu mắm tôm Hàng Khay",
+    "description": "Đậu rán giòn, chả cốm, nem chua rán, mắm tôm pha chanh.",
+    "mustTry": "Mẹt bún đậu đầy đủ",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Hồ Gươm",
+    "address": "31 Hàng Khay, Hoàn Kiếm",
+    "latitude": 21.0263,
+    "longitude": 105.8528,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "bun-dau"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Bún đậu.*Hàng Khay|Hàng Khay.*Bún|Bun Dau Hang Khay"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "xoi-yen",
+    "slug": "xoi-yen",
+    "name": "Xôi Yến",
+    "description": "Xôi nóng với nhiều topping: lạp xường, gà, trứng, pate.",
+    "mustTry": "Xôi xéo / xôi thập cẩm",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "35B Nguyễn Hữu Huân, Hoàn Kiếm",
+    "latitude": 21.033767,
+    "longitude": 105.854536,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "xoi"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/4210706604",
+        "label": "Xoi Yen"
+      }
+    ],
+    "osmHint": {
+      "match": "Xôi Yến|Xoi Yen"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "banh-cuon-thanh-van",
+    "slug": "banh-cuon-thanh-van",
+    "name": "Bánh cuốn Thanh Vân",
+    "description": "Bánh cuốn tráng mỏng tại chỗ, ăn sáng rất hợp.",
+    "mustTry": "Bánh cuốn chả quế",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "14 Hàng Gà, Hoàn Kiếm",
+    "latitude": 21.036053,
+    "longitude": 105.847171,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "banh-cuon"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/4504646891",
+        "label": "Bánh Cuốn Gia Truyền Thanh Vân"
+      }
+    ],
+    "osmHint": {
+      "match": "Thanh Vân"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "banh-cuon-ba-hoanh",
+    "slug": "banh-cuon-ba-hoanh",
+    "name": "Bánh cuốn Bà Hoành",
+    "description": "Quán bánh cuốn lâu năm, có món bánh cuốn trứng đặc trưng.",
+    "mustTry": "Bánh cuốn trứng",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Hai Bà Trưng",
+    "address": "66 Tô Hiến Thành, Hai Bà Trưng",
+    "latitude": 21.013543,
+    "longitude": 105.849564,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "banh-cuon"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/5384962122",
+        "label": "Bánh Cuốn Bà Hoanh"
+      }
+    ],
+    "osmHint": {
+      "match": "Hoành|Hoanh"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "banh-tom-ho-tay",
+    "slug": "banh-tom-ho-tay",
+    "name": "Bánh tôm Hồ Tây",
+    "description": "Bánh tôm chiên giòn, ngồi ăn ngắm Hồ Tây.",
+    "mustTry": "Bánh tôm, bún ốc",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Hồ Tây",
+    "address": "1 Thanh Niên, Tây Hồ",
+    "latitude": 21.047321,
+    "longitude": 105.837626,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "an-vat"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/310727632",
+        "label": "Cửa Hàng Bánh Tôm Hồ Tây"
+      }
+    ],
+    "osmHint": {
+      "match": "Bánh tôm Hồ Tây"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "che-bon-mua",
+    "slug": "che-bon-mua",
+    "name": "Chè Bốn Mùa",
+    "description": "Quán chè hơn 50 năm trong phố cổ.",
+    "mustTry": "Chè sen long nhãn, chè bưởi",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "4 Hàng Cân, Hoàn Kiếm",
+    "latitude": 21.035085,
+    "longitude": 105.849532,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "che",
+      "an-vat"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/6850836187",
+        "label": "Chè Bốn Mùa"
+      }
+    ],
+    "osmHint": {
+      "match": "Chè Bốn Mùa"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "kem-trang-tien",
+    "slug": "kem-trang-tien",
+    "name": "Kem Tràng Tiền",
+    "description": "Kem que huyền thoại của người Hà Nội từ 1958.",
+    "mustTry": "Kem cốm, kem dừa",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Tràng Tiền",
+    "address": "35 Tràng Tiền, Hoàn Kiếm",
+    "latitude": 21.0249,
+    "longitude": 105.855,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "an-vat",
+      "kem"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Kem Tràng Tiền|Trang Tien"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "pizza-4ps",
+    "slug": "pizza-4ps",
+    "name": "Pizza 4P's Tràng Tiền",
+    "description": "Pizza kiểu Nhật–Ý với phô mai tự làm. Nên đặt bàn trước.",
+    "mustTry": "Pizza burrata",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Tràng Tiền",
+    "address": "43 Tràng Tiền, Hoàn Kiếm",
+    "latitude": 21.0249,
+    "longitude": 105.8545,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 3,
+    "tags": [
+      "nha-hang"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "4P",
+      "radius": 300
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bia-hoi-ta-hien",
+    "slug": "bia-hoi-ta-hien",
+    "name": "Phố bia Tạ Hiện",
+    "description": "Phố \"tây\" nhộn nhịp về đêm, ngồi ghế nhựa uống bia hơi.",
+    "mustTry": "Bia hơi, nem chua rán",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "Tạ Hiện, Hoàn Kiếm",
+    "latitude": 21.035301,
+    "longitude": 105.851978,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "an-vat",
+      "bia"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/765597030",
+        "label": "Phố Tạ Hiện"
+      }
+    ],
+    "osmHint": {
+      "match": "Tạ Hiện",
+      "street": true
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "tong-duy-tan",
+    "slug": "tong-duy-tan",
+    "name": "Phố ẩm thực Tống Duy Tân",
+    "description": "Con phố tập trung nhiều quán ăn đa dạng.",
+    "mustTry": "Cháo, phở xào, lẩu",
+    "category": "food",
+    "provinceSlug": "ha-noi",
+    "area": "Hoàn Kiếm",
+    "address": "Tống Duy Tân, Hoàn Kiếm",
+    "latitude": 21.02943,
+    "longitude": 105.843668,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 2,
+    "tags": [
+      "an-vat",
+      "khu-am-thuc"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/28924633",
+        "label": "Phố Tống Duy Tân"
+      }
+    ],
+    "osmHint": {
+      "match": "Tống Duy Tân",
+      "street": true
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cafe-giang",
+    "slug": "cafe-giang",
+    "name": "Cà phê Giảng",
+    "description": "Nơi \"khai sinh\" cà phê trứng từ năm 1946.",
+    "mustTry": "Cà phê trứng",
+    "category": "cafe",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "39 Nguyễn Hữu Huân, Hoàn Kiếm",
+    "latitude": 21.033606,
+    "longitude": 105.854622,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "ca-phe-trung"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": true,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/4311854914",
+        "label": "Cà Phê Giảng - Cà Phê Trứng"
+      }
+    ],
+    "osmHint": {
+      "match": "Giảng"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cafe-dinh",
+    "slug": "cafe-dinh",
+    "name": "Cafe Đinh",
+    "description": "Quán cũ kỹ trên tầng 2, nhìn ra Hồ Gươm. Do người nhà cụ Giảng mở.",
+    "mustTry": "Cà phê trứng",
+    "category": "cafe",
+    "provinceSlug": "ha-noi",
+    "area": "Hồ Gươm",
+    "address": "13 Đinh Tiên Hoàng (tầng 2), Hoàn Kiếm",
+    "latitude": 21.0315,
+    "longitude": 105.853,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "ca-phe-trung",
+      "view-ho"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Café Đinh|Cafe Đinh|Cafe Dinh|Cà phê Đinh"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "the-note-coffee",
+    "slug": "the-note-coffee",
+    "name": "The Note Coffee",
+    "description": "Quán dán đầy giấy note của khách khắp tường, gần Hồ Gươm.",
+    "mustTry": "Cà phê muối, cà phê trứng",
+    "category": "cafe",
+    "provinceSlug": "ha-noi",
+    "area": "Hồ Gươm",
+    "address": "64 Lương Văn Can, Hoàn Kiếm",
+    "latitude": 21.031621,
+    "longitude": 105.850845,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "view-ho"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/4486254298",
+        "label": "The Note Coffee"
+      }
+    ],
+    "osmHint": {
+      "match": "The Note"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cafe-lam",
+    "slug": "cafe-lam",
+    "name": "Cà phê Lâm",
+    "description": "Quán cà phê từ thập niên 1950, nơi nhiều họa sĩ từng ghé.",
+    "mustTry": "Cà phê đen nóng",
+    "category": "cafe",
+    "provinceSlug": "ha-noi",
+    "area": "Phố cổ",
+    "address": "91 Nguyễn Hữu Huân, Hoàn Kiếm",
+    "latitude": 21.035,
+    "longitude": 105.8545,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "ca-phe-co"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Cà phê Lâm|Cafe Lâm|Cafe Lam|Café Lâm"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cafe-pho-co",
+    "slug": "cafe-pho-co",
+    "name": "Cafe Phố Cổ",
+    "description": "Đi qua lối nhỏ trong nhà cổ, sân thượng nhìn thẳng ra Hồ Gươm.",
+    "mustTry": "Cà phê trứng",
+    "category": "cafe",
+    "provinceSlug": "ha-noi",
+    "area": "Hồ Gươm",
+    "address": "11 Hàng Gai, Hoàn Kiếm",
+    "latitude": 21.032236,
+    "longitude": 105.851068,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "view-ho",
+      "ca-phe-trung"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/5004266348",
+        "label": "Cafè Phố Cổ"
+      }
+    ],
+    "osmHint": {
+      "match": "Phố Cổ"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cau-rong",
+    "slug": "cau-rong",
+    "name": "Cầu Rồng",
+    "description": "Cây cầu hình rồng vượt sông Hàn, biểu tượng hiện đại của Đà Nẵng.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "da-nang",
+    "area": "Sông Hàn",
+    "address": "Cầu Rồng, Đà Nẵng",
+    "latitude": 16.061168,
+    "longitude": 108.227898,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "kien-truc",
+      "view-dep"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": true,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/694831926",
+        "label": "Cầu Rồng"
+      }
+    ],
+    "osmHint": {
+      "match": "Cầu Rồng"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T03:07:13.109Z"
+  },
+  {
+    "id": "bien-my-khe",
+    "slug": "bien-my-khe",
+    "name": "Bãi biển Mỹ Khê",
+    "description": "Bãi biển cát trắng dài ngay trong thành phố.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "da-nang",
+    "area": "Sơn Trà",
+    "address": "Đường Võ Nguyên Giáp, Đà Nẵng",
+    "latitude": 16.0604,
+    "longitude": 108.2468,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "bien",
+      "thien-nhien"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Mỹ Khê"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "chua-linh-ung-son-tra",
+    "slug": "chua-linh-ung-son-tra",
+    "name": "Chùa Linh Ứng (Sơn Trà)",
+    "description": "Ngôi chùa trên bán đảo Sơn Trà với tượng Quán Thế Âm nhìn ra biển.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "da-nang",
+    "area": "Sơn Trà",
+    "address": "Bán đảo Sơn Trà, Đà Nẵng",
+    "latitude": 16.1003,
+    "longitude": 108.2779,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "tam-linh",
+      "view-dep",
+      "nui"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Linh Ứng"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "ngu-hanh-son",
+    "slug": "ngu-hanh-son",
+    "name": "Danh thắng Ngũ Hành Sơn",
+    "description": "Cụm núi đá vôi với hang động, chùa chiền và làng đá mỹ nghệ Non Nước.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "da-nang",
+    "area": "Ngũ Hành Sơn",
+    "address": "Huyền Trân Công Chúa, Đà Nẵng",
+    "latitude": 16.0036,
+    "longitude": 108.2635,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "nui",
+      "hang-dong",
+      "tam-linh"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Ngũ Hành Sơn"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "bao-tang-cham",
+    "slug": "bao-tang-cham",
+    "name": "Bảo tàng Điêu khắc Chăm",
+    "description": "Bộ sưu tập điêu khắc Chăm Pa lớn nhất Việt Nam.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "da-nang",
+    "area": "Hải Châu",
+    "address": "2 đường 2 Tháng 9, Đà Nẵng",
+    "latitude": 16.060196,
+    "longitude": 108.223168,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "bao-tang",
+      "van-hoa",
+      "lich-su"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/302872188",
+        "label": "Bảo tàng Nghệ thuật Điêu khắc Chăm Đà Nẵng"
+      }
+    ],
+    "osmHint": {
+      "match": "Điêu khắc Chăm|Chăm"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T03:07:59.323Z"
+  },
+  {
+    "id": "cho-han",
+    "slug": "cho-han",
+    "name": "Chợ Hàn",
+    "description": "Chợ lâu đời bên sông Hàn, nhiều đặc sản khô và quầy ăn vặt.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "da-nang",
+    "area": "Hải Châu",
+    "address": "119 Trần Phú, Đà Nẵng",
+    "latitude": 16.068261,
+    "longitude": 108.224389,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "cho",
+      "mua-sam",
+      "an-vat"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/204885903",
+        "label": "Chợ Hàn"
+      }
+    ],
+    "osmHint": {
+      "match": "Chợ Hàn"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T03:08:20.662Z"
+  },
+  {
+    "id": "pho-co-hoi-an",
+    "slug": "pho-co-hoi-an",
+    "name": "Phố cổ Hội An (Chùa Cầu)",
+    "description": "Đô thị cổ được UNESCO công nhận, nổi bật với Chùa Cầu và phố đèn lồng.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "da-nang",
+    "area": "Hội An",
+    "address": "Nguyễn Thị Minh Khai, Hội An, Đà Nẵng",
+    "latitude": 15.877156,
+    "longitude": 108.326023,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "di-san",
+      "lang-co",
+      "van-hoa"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": true,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/631074476",
+        "label": "Chùa Cầu"
+      }
+    ],
+    "osmHint": {
+      "match": "Chùa Cầu|Lai Viễn"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T03:08:23.761Z"
+  },
+  {
+    "id": "ba-na-hills",
+    "slug": "ba-na-hills",
+    "name": "Sun World Bà Nà Hills",
+    "description": "Khu du lịch trên núi Bà Nà với cáp treo và Cầu Vàng.",
+    "mustTry": null,
+    "category": "fun",
+    "provinceSlug": "da-nang",
+    "area": "Hòa Vang",
+    "address": "Bà Nà, Đà Nẵng",
+    "latitude": 15.9977,
+    "longitude": 107.9884,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 4,
+    "tags": [
+      "giai-tri",
+      "nui",
+      "gia-dinh"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Bà Nà|Ba Na",
+      "radius": 3000
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "asia-park",
+    "slug": "asia-park",
+    "name": "Sun World Đà Nẵng Wonders (Asia Park)",
+    "description": "Công viên giải trí với vòng quay Sun Wheel bên bờ sông Hàn.",
+    "mustTry": null,
+    "category": "fun",
+    "provinceSlug": "da-nang",
+    "area": "Hải Châu",
+    "address": "1 Phan Đăng Lưu, Đà Nẵng",
+    "latitude": 16.040468,
+    "longitude": 108.228471,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 2,
+    "tags": [
+      "giai-tri",
+      "gia-dinh"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "node/12319954780",
+        "label": "Sun Wheel"
+      }
+    ],
+    "osmHint": {
+      "match": "Asia Park|Sun World|Sun Wheel"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T03:08:26.277Z"
+  },
+  {
+    "id": "banh-xeo-ba-duong",
+    "slug": "banh-xeo-ba-duong",
+    "name": "Bánh xèo Bà Dưỡng",
+    "description": "Quán bánh xèo nằm sâu trong kiệt, ăn kèm nem lụi và nước chấm gan.",
+    "mustTry": "Bánh xèo, nem lụi",
+    "category": "food",
+    "provinceSlug": "da-nang",
+    "area": "Hải Châu",
+    "address": "K280/23 Hoàng Diệu, Đà Nẵng",
+    "latitude": 16.0545,
+    "longitude": 108.216,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "banh-xeo"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Bà Dưỡng"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "mi-quang-ba-mua",
+    "slug": "mi-quang-ba-mua",
+    "name": "Mì Quảng Bà Mua",
+    "description": "Thương hiệu mì Quảng quen thuộc của người Đà Nẵng.",
+    "mustTry": "Mì Quảng gà, tôm thịt",
+    "category": "food",
+    "provinceSlug": "da-nang",
+    "area": "Hải Châu",
+    "address": "19 Trần Bình Trọng, Đà Nẵng",
+    "latitude": 16.0675,
+    "longitude": 108.2186,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "mi-quang"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Bà Mua"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "trang-an",
+    "slug": "trang-an",
+    "name": "Quần thể danh thắng Tràng An",
+    "description": "Di sản thế giới kép: đi thuyền qua các hang động và thung lũng núi đá vôi.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ninh-binh",
+    "area": "Hoa Lư",
+    "address": "Bến thuyền Tràng An, Ninh Bình",
+    "latitude": 20.252726,
+    "longitude": 105.918081,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 2,
+    "tags": [
+      "di-san",
+      "thuyen",
+      "hang-dong",
+      "thien-nhien"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": true,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/474685617",
+        "label": "Khu Du lịch sinh Thái Tràng An"
+      }
+    ],
+    "osmHint": {
+      "match": "Tràng An"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T03:08:31.953Z"
+  },
+  {
+    "id": "tam-coc",
+    "slug": "tam-coc",
+    "name": "Tam Cốc – Bích Động",
+    "description": "Đi thuyền trên sông Ngô Đồng qua ba hang, đẹp nhất mùa lúa chín.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ninh-binh",
+    "area": "Hoa Lư",
+    "address": "Tam Cốc, Ninh Bình",
+    "latitude": 20.2171,
+    "longitude": 105.937,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 2,
+    "tags": [
+      "thuyen",
+      "hang-dong",
+      "thien-nhien"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Tam Cốc"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "chua-bai-dinh",
+    "slug": "chua-bai-dinh",
+    "name": "Chùa Bái Đính",
+    "description": "Quần thể chùa quy mô lớn trên sườn núi.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ninh-binh",
+    "area": "Gia Viễn",
+    "address": "Gia Sinh, Ninh Bình",
+    "latitude": 20.2745,
+    "longitude": 105.864,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "tam-linh",
+      "kien-truc"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Bái Đính",
+      "radius": 2500
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "hang-mua",
+    "slug": "hang-mua",
+    "name": "Hang Múa",
+    "description": "Leo khoảng 500 bậc đá để ngắm toàn cảnh Tam Cốc từ trên cao.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ninh-binh",
+    "area": "Hoa Lư",
+    "address": "Ninh Xuân, Ninh Bình",
+    "latitude": 20.229,
+    "longitude": 105.93,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "nui",
+      "view-dep"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Hang Múa|Múa"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "co-do-hoa-lu",
+    "slug": "co-do-hoa-lu",
+    "name": "Cố đô Hoa Lư",
+    "description": "Kinh đô đầu tiên của nhà nước phong kiến tập quyền, có đền thờ vua Đinh và vua Lê.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ninh-binh",
+    "area": "Hoa Lư",
+    "address": "Trường Yên, Ninh Bình",
+    "latitude": 20.284612,
+    "longitude": 105.905137,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 1,
+    "tags": [
+      "lich-su",
+      "van-hoa"
+    ],
+    "verificationStatus": "coordinates_checked",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [
+      {
+        "provider": "osm",
+        "providerPlaceId": "way/772041809",
+        "label": "Đền vua Đinh Tiên Hoàng"
+      }
+    ],
+    "osmHint": {
+      "match": "Đinh Tiên Hoàng|Hoa Lư"
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T03:09:03.782Z"
+  },
+  {
+    "id": "nha-tho-phat-diem",
+    "slug": "nha-tho-phat-diem",
+    "name": "Nhà thờ đá Phát Diệm",
+    "description": "Quần thể nhà thờ bằng đá và gỗ kết hợp kiến trúc Á – Âu cuối thế kỷ 19.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ninh-binh",
+    "area": "Kim Sơn",
+    "address": "Phát Diệm, Ninh Bình",
+    "latitude": 20.093,
+    "longitude": 106.078,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 0,
+    "tags": [
+      "kien-truc",
+      "tam-linh"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Phát Diệm",
+      "radius": 2500
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "van-long",
+    "slug": "van-long",
+    "name": "Khu bảo tồn Vân Long",
+    "description": "Đầm nước rộng giữa núi đá, nơi sinh sống của voọc mông trắng.",
+    "mustTry": null,
+    "category": "sight",
+    "provinceSlug": "ninh-binh",
+    "area": "Gia Viễn",
+    "address": "Gia Vân, Ninh Bình",
+    "latitude": 20.364,
+    "longitude": 105.867,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 2,
+    "tags": [
+      "thien-nhien",
+      "thuyen"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Vân Long",
+      "radius": 3000
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  },
+  {
+    "id": "cuc-phuong",
+    "slug": "cuc-phuong",
+    "name": "Vườn quốc gia Cúc Phương",
+    "description": "Khu rừng nguyên sinh với đường mòn, trung tâm cứu hộ linh trưởng.",
+    "mustTry": null,
+    "category": "fun",
+    "provinceSlug": "ninh-binh",
+    "area": "Nho Quan",
+    "address": "Cúc Phương, Ninh Bình",
+    "latitude": 20.317,
+    "longitude": 105.607,
+    "priceMin": null,
+    "priceMax": null,
+    "priceLevel": 2,
+    "tags": [
+      "thien-nhien",
+      "gia-dinh"
+    ],
+    "verificationStatus": "unverified",
+    "publicationStatus": "published",
+    "isDemo": true,
+    "editorPick": false,
+    "providerRefs": [],
+    "osmHint": {
+      "match": "Cúc Phương",
+      "radius": 5000
+    },
+    "createdAt": "2026-10-09T02:52:34Z",
+    "updatedAt": "2026-10-09T02:52:34Z"
+  }
+]

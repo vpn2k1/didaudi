@@ -1,0 +1,19 @@
+{
+  "categories": [
+    { "id": "food", "label": "Ăn uống", "icon": "🍜" },
+    { "id": "cafe", "label": "Cà phê", "icon": "☕" },
+    { "id": "sight", "label": "Du lịch", "icon": "🏛️" },
+    { "id": "fun", "label": "Vui chơi", "icon": "🎡" }
+  ],
+  "tags": {
+    "pho": "Phở", "bun-cha": "Bún chả", "bun": "Bún", "bun-dau": "Bún đậu", "mien": "Miến", "cha-ca": "Chả cá",
+    "banh-mi": "Bánh mì", "banh-cuon": "Bánh cuốn", "banh-xeo": "Bánh xèo", "mi-quang": "Mì Quảng", "xoi": "Xôi",
+    "che": "Chè", "kem": "Kem", "an-vat": "Ăn vặt", "bia": "Bia hơi", "nha-hang": "Nhà hàng", "khu-am-thuc": "Phố ẩm thực",
+    "ca-phe-trung": "Cà phê trứng", "ca-phe-co": "Cà phê cổ", "view-ho": "View hồ",
+    "lich-su": "Lịch sử", "van-hoa": "Văn hóa", "tam-linh": "Tâm linh", "bao-tang": "Bảo tàng", "kien-truc": "Kiến trúc",
+    "ho": "Hồ", "bien": "Biển", "nui": "Núi", "hang-dong": "Hang động", "thien-nhien": "Thiên nhiên", "cong-vien": "Công viên",
+    "pho-di-bo": "Phố đi bộ", "cho": "Chợ", "mua-sam": "Mua sắm", "view-dep": "View đẹp", "lang-nghe": "Làng nghề",
+    "lang-co": "Làng cổ", "nghe-thuat": "Nghệ thuật", "di-san": "Di sản UNESCO", "gia-dinh": "Đi cùng gia đình",
+    "giai-tri": "Giải trí", "thuyen": "Đi thuyền"
+  }
+}
