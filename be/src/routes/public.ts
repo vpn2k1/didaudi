@@ -10,7 +10,7 @@ import { suggestLocations } from '../services/suggest.js';
 
 const placeSlug = z.string().regex(/^[A-Za-z0-9_-]{2,320}$/);
 
-export function publicRoutes(deps: { provider: PlaceProvider; repo: PlaceRepository; provinces: () => Province[]; taxonomy: () => Taxonomy; photos: Record<string, Photo> }) {
+export function publicRoutes(deps: { provider: PlaceProvider; googleProvider?: PlaceProvider & { photoUri(name: string, maxWidthPx?: number): Promise<string> }; repo: PlaceRepository; provinces: () => Province[]; taxonomy: () => Taxonomy; photos: Record<string, Photo> }) {
   const r = Router();
   const { provider } = deps;
   // Dữ liệu provider bên ngoài không được cache ở CDN; dữ liệu nội bộ cache ngắn
@@ -20,6 +20,12 @@ export function publicRoutes(deps: { provider: PlaceProvider; repo: PlaceReposit
     '/places',
     rateLimit({ windowMs: 60_000, limit: 120, standardHeaders: 'draft-7', legacyHeaders: false, message: { error: 'RATE_LIMITED', message: 'Bạn thao tác quá nhanh, thử lại sau ít phút.' } }),
   );
+
+  // Google Places chỉ tải khi người dùng bấm tìm; giới hạn chặt để tránh phát sinh chi phí ngoài ý muốn.
+  r.use('/google/places', rateLimit({ windowMs: 60_000, limit: 20, standardHeaders: 'draft-7', legacyHeaders: false,
+    message: { error: 'RATE_LIMITED', message: 'Bạn tìm Google Maps quá nhanh, thử lại sau ít phút.' } }));
+  r.use('/google/photo', rateLimit({ windowMs: 60_000, limit: 100, standardHeaders: 'draft-7', legacyHeaders: false,
+    message: { error: 'RATE_LIMITED', message: 'Bạn tải ảnh Google Maps quá nhanh, thử lại sau ít phút.' } }));
 
   r.use(
     ['/plan', '/suggest'],
@@ -72,6 +78,7 @@ export function publicRoutes(deps: { provider: PlaceProvider; repo: PlaceReposit
       categories: deps.taxonomy().categories,
       tags: deps.taxonomy().tags,
       provider: provider.info,
+      googleSearchAvailable: !!deps.googleProvider && provider.info.id === 'local',
       cheapMaxVnd: CHEAP_MAX_VND,
       defaultRadiusKm: DEFAULT_RADIUS_KM,
     });
@@ -80,9 +87,17 @@ export function publicRoutes(deps: { provider: PlaceProvider; repo: PlaceReposit
   r.get('/provinces', async (_req, res, next) => {
     try {
       const counts = await provider.countByProvince();
+      const records = provider.info.id === 'local' ? await deps.repo.list() : [];
       const items = deps.provinces().map((p) => {
         const byCategory = counts[p.slug] ?? {};
-        return { ...p, placeCount: Object.values(byCategory).reduce((a, b) => a + (b ?? 0), 0), byCategory };
+        const coverRecord = records.find((place) => place.provinceSlug === p.slug && place.publicationStatus === 'published' && deps.photos[place.id]?.match === 'place');
+        const cover = coverRecord && deps.photos[coverRecord.id];
+        return {
+          ...p,
+          placeCount: Object.values(byCategory).reduce((a, b) => a + (b ?? 0), 0),
+          byCategory,
+          coverPhoto: cover ? { url: cover.thumbUrl, pageUrl: cover.pageUrl, author: cover.author, license: cover.license, licenseUrl: cover.licenseUrl, match: cover.match, source: cover.source } : null,
+        };
       });
       res.set('Cache-Control', 'public, max-age=300').json({ items });
     } catch (e) {
@@ -95,7 +110,15 @@ export function publicRoutes(deps: { provider: PlaceProvider; repo: PlaceReposit
       const p = deps.provinces().find((x) => x.slug === req.params.slug);
       if (!p) return res.status(404).json({ error: 'NOT_FOUND', message: 'Không tìm thấy tỉnh/thành' });
       const byCategory = (await provider.countByProvince())[p.slug] ?? {};
-      res.set('Cache-Control', 'public, max-age=300').json({ ...p, placeCount: Object.values(byCategory).reduce((a, b) => a + (b ?? 0), 0), byCategory });
+      const records = provider.info.id === 'local' ? await deps.repo.list() : [];
+      const coverRecord = records.find((place) => place.provinceSlug === p.slug && place.publicationStatus === 'published' && deps.photos[place.id]?.match === 'place');
+      const cover = coverRecord && deps.photos[coverRecord.id];
+      res.set('Cache-Control', 'public, max-age=300').json({
+        ...p,
+        placeCount: Object.values(byCategory).reduce((a, b) => a + (b ?? 0), 0),
+        byCategory,
+        coverPhoto: cover ? { url: cover.thumbUrl, pageUrl: cover.pageUrl, author: cover.author, license: cover.license, licenseUrl: cover.licenseUrl, match: cover.match, source: cover.source } : null,
+      });
     } catch (e) {
       next(e);
     }
@@ -115,6 +138,31 @@ export function publicRoutes(deps: { provider: PlaceProvider; repo: PlaceReposit
     try {
       const query = searchQuerySchema.parse(req.query);
       res.set('Cache-Control', query.near ? 'private, no-store' : cacheHeader).json({ ...(await provider.search(query)), provider: provider.info });
+    } catch (e) {
+      next(e);
+    }
+  });
+
+  r.get('/google/places/search', async (req, res, next) => {
+    try {
+      if (!deps.googleProvider) return res.status(503).json({ error: 'NOT_CONFIGURED', message: 'Chưa cấu hình Google Places API key.' });
+      const query = searchQuerySchema.parse(req.query);
+      if (!query.q && !query.province && !query.category?.length) {
+        return res.status(400).json({ error: 'VALIDATION', message: 'Hãy nhập tên, chọn tỉnh hoặc danh mục để tìm trên Google Maps.' });
+      }
+      const result = await deps.googleProvider.search({ ...query, page: 1, limit: Math.min(query.limit, 20) });
+      res.set('Cache-Control', 'private, no-store').json({ ...result, provider: deps.googleProvider.info });
+    } catch (e) {
+      next(e);
+    }
+  });
+
+  r.get('/google/photo', async (req, res, next) => {
+    try {
+      if (!deps.googleProvider) return res.status(503).json({ error: 'NOT_CONFIGURED', message: 'Chưa cấu hình Google Places API key.' });
+      const name = z.string().max(1500).parse(req.query.name);
+      const photoUri = await deps.googleProvider.photoUri(name, 480);
+      res.set('Cache-Control', 'private, no-store').redirect(302, photoUri);
     } catch (e) {
       next(e);
     }

@@ -5,6 +5,7 @@ import { cache } from 'react';
 import { PlaceCard } from '@/components/PlaceCard';
 import { DistanceFromUser, PlaceMap } from '@/components/PlaceDetailClient';
 import { PlaceImage } from '@/components/PlaceImage';
+import { PhotoAttribution } from '@/components/PhotoAttribution';
 import { CATEGORY_ICON, Icon, type IconName } from '@/components/Icon';
 import { DemoBadge, Pill } from '@/components/ui';
 import { publicEnv } from '@/config/env';
@@ -104,18 +105,6 @@ export default async function PlaceDetailPage({ params }: { params: Params }) {
       <div className="relative isolate overflow-hidden bg-brand-900 text-white">
         <PlaceImage place={p} credit="none" priority className="absolute inset-0 -z-20" />
         <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
-        {p.photo ? (
-          <a
-            href={p.photo.pageUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="absolute bottom-14 right-4 max-w-[60%] truncate rounded-full bg-black/45 px-2.5 py-0.5 text-[10px] text-white/85 backdrop-blur hover:underline"
-          >
-            {p.photo.match === 'topic' && 'Ảnh minh họa món · '}Ảnh: {p.photo.author} · {p.photo.license} · Wikimedia Commons
-          </a>
-        ) : (
-          <span className="absolute bottom-14 right-4 rounded-full bg-black/45 px-2.5 py-0.5 text-[10px] text-white/85 backdrop-blur">Ảnh vẽ minh họa – chưa có ảnh thật</span>
-        )}
         <div className="mx-auto max-w-7xl px-4 pb-20 pt-6 md:pt-10">
           <nav aria-label="Breadcrumb" className="text-sm text-white/80">
             <ol className="flex flex-wrap items-center gap-1.5">
@@ -152,8 +141,9 @@ export default async function PlaceDetailPage({ params }: { params: Params }) {
           )}
         </div>
       </div>
+      <PhotoAttribution photo={p.photo} className="mx-auto max-w-7xl px-4 py-2" />
 
-      <div className="mx-auto -mt-10 grid max-w-7xl gap-6 px-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+      <div className="mx-auto mt-4 grid max-w-7xl gap-6 px-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
         <article className="relative rounded-3xl bg-surface p-5 shadow-xl shadow-ink/5 ring-1 ring-line md:p-7">
           <div className="flex flex-wrap gap-1.5">
             {p.isDemo && <DemoBadge />}

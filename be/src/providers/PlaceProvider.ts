@@ -35,7 +35,7 @@ export interface PlaceSummary {
   /** Mức giá ước tính 0–4 (xem priceLevelSchema). */
   priceLevel: number | null;
   /** Ảnh thật kèm ghi công; null = chưa có ảnh được phép dùng. */
-  photo: { url: string; pageUrl: string; author: string; license: string; licenseUrl: string | null; match: 'place' | 'topic'; source: string } | null;
+  photo: { url: string; pageUrl: string; author: string; authorUrl?: string | null; authorAvatarUrl?: string | null; license: string; licenseUrl: string | null; match: 'place' | 'topic'; source: string } | null;
   rating: number | null;
   ratingCount: number | null;
   openStatus: OpenStatus;

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Hero } from '@/components/Hero';
 import { Icon } from '@/components/Icon';
+import { PhotoAttribution } from '@/components/PhotoAttribution';
 import { api } from '@/lib/server';
 
 export const dynamic = 'force-dynamic';
@@ -27,11 +28,18 @@ export default async function ProvincesPage() {
             <h2 className="text-lg font-bold tracking-tight">{g.title}</h2>
             <ul className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
               {g.items.map((p) => (
-                <li key={p.slug}>
+                <li key={p.slug} className="overflow-hidden rounded-2xl bg-canvas/50 ring-1 ring-line">
+                  {p.coverPhoto && (
+                    <>
+                      {/* eslint-disable-next-line @next/next/no-img-element -- URL ảnh thumbnail từ Wikimedia Commons */}
+                      <img src={p.coverPhoto.url} alt="" loading="lazy" referrerPolicy="no-referrer" className="h-32 w-full object-cover" />
+                      <PhotoAttribution photo={p.coverPhoto} className="px-3 py-2" />
+                    </>
+                  )}
                   <Link
                     href={`/${p.slug}`}
-                    className={`group flex items-center gap-3 rounded-2xl px-4 py-3 ring-1 ring-inset transition ${
-                      p.placeCount ? 'bg-brand-50/60 ring-brand-100 hover:bg-brand-50 hover:ring-brand-500' : 'ring-line hover:bg-canvas'
+                    className={`group flex items-center gap-3 px-4 py-3 transition ${
+                      p.placeCount ? 'bg-brand-50/60 hover:bg-brand-50' : 'hover:bg-canvas'
                     }`}
                   >
                     <span className={`grid size-9 shrink-0 place-items-center rounded-xl ${p.placeCount ? 'bg-brand-600 text-white' : 'bg-canvas text-muted'}`}>

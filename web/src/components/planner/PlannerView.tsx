@@ -11,6 +11,7 @@ import { Icon } from '../Icon';
 import { MapView } from '../MapView';
 import { PlaceCard } from '../PlaceCard';
 import { PlaceImage } from '../PlaceImage';
+import { PhotoAttribution } from '../PhotoAttribution';
 import { DemoBadge, Notice, Pill, Skeleton } from '../ui';
 import { useUserLocation } from '../useUserLocation';
 import { LocationPicker, type LocationValue } from './LocationPicker';
@@ -410,7 +411,10 @@ function StopCard({ stop: s, meta, selected, canSwap, onSwap, isList, last }: { 
         {!last && !isList && <span aria-hidden className="mt-1 w-0.5 flex-1 border-l-2 border-dashed border-brand-500/50" />}
       </div>
       <article className={`group mb-1 flex min-w-0 flex-1 flex-col overflow-hidden rounded-3xl bg-surface shadow-sm transition hover:shadow-lg sm:flex-row ${selected ? 'ring-2 ring-brand-500' : 'ring-1 ring-line'}`}>
-        <PlaceImage place={p} className="h-44 w-full shrink-0 sm:h-auto sm:min-h-44 sm:w-56" />
+        <div className="w-full shrink-0 sm:w-56">
+          <PlaceImage place={p} credit="none" className="h-44 w-full" />
+          <PhotoAttribution photo={p.photo} className="px-3 py-2" />
+        </div>
         <div className="flex min-w-0 flex-1 flex-col gap-2 p-4">
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold">
             <span className="rounded-full bg-brand-50 px-2.5 py-0.5 uppercase tracking-wide text-brand-700">{s.slotLabel}</span>

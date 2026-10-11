@@ -2,16 +2,18 @@ import request from 'supertest';
 import { describe, expect, it } from 'vitest';
 import { createApp } from '../src/app.js';
 import { loadConfig } from '../src/config.js';
+import type { Photo } from '../src/domain/schemas.js';
 import { LocalPlaceProvider } from '../src/providers/localPlaceProvider.js';
+import type { PlaceProvider } from '../src/providers/PlaceProvider.js';
 import { InMemoryPlaceRepository } from '../src/repositories/placeRepository.js';
 import { places, provinces, taxonomy } from './fixtures.js';
 
 const PASSWORD = 'mat-khau-test-123';
-function makeApp(env: Record<string, string> = {}) {
+function makeApp(env: Record<string, string> = {}, photos: Record<string, Photo> = {}, googleProvider?: PlaceProvider & { photoUri(name: string, maxWidthPx?: number): Promise<string> }) {
   const config = loadConfig({ NODE_ENV: 'test', ...env });
   const repo = new InMemoryPlaceRepository(places);
   const provider = new LocalPlaceProvider(repo, () => ({ provinces, taxonomy }));
-  return { app: createApp({ config, provider, repo, provinces, taxonomy, log: () => {} }), repo };
+  return { app: createApp({ config, provider, googleProvider, repo, provinces, taxonomy, photos, log: () => {} }), repo };
 }
 const adminEnv = { ADMIN_PASSWORD: PASSWORD, ADMIN_SESSION_SECRET: 'x'.repeat(40) };
 
@@ -38,6 +40,42 @@ describe('public API', () => {
     const r = await request(app).get('/api/provinces');
     expect(r.body.items.find((p: { slug: string }) => p.slug === 'ha-noi').placeCount).toBe(4);
     expect((await request(app).get('/api/provinces/khong-co')).status).toBe(404);
+  });
+
+  it('tìm Google chỉ khi cấu hình, không cache và không thay dữ liệu local', async () => {
+    expect((await request(app).get('/api/google/places/search?q=pho')).status).toBe(503);
+    const googleProvider: PlaceProvider & { photoUri(name: string, maxWidthPx?: number): Promise<string> } = {
+      info: { id: 'google', label: 'Google Places', attribution: 'Google Maps', capabilities: { rating: true, openingHours: true, requiresProviderMap: true, indexable: false } },
+      search: async () => ({ items: [], total: 0, page: 1, pageSize: 0, facets: { hasPriceData: false, hasOpeningHours: true, hasRating: true } }),
+      getBySlug: async () => null,
+      countByProvince: async () => ({}),
+      photoUri: async () => 'https://lh3.googleusercontent.com/example',
+    };
+    const { app: withGoogle } = makeApp({}, {}, googleProvider);
+    const r = await request(withGoogle).get('/api/google/places/search?q=pho&province=ha-noi');
+    expect(r.status).toBe(200);
+    expect(r.headers['cache-control']).toBe('private, no-store');
+    expect(r.body.provider.id).toBe('google');
+    expect((await request(withGoogle).get('/api/google/places/search')).status).toBe(400);
+    expect((await request(withGoogle).get('/api/meta')).body.googleSearchAvailable).toBe(true);
+    expect((await request(withGoogle).get('/api/places/search?q=pho')).body.provider.id).toBe('local');
+    const photo = await request(withGoogle).get('/api/google/photo?name=places/ChIJabcdefghijk/photos/abcdefghijk');
+    expect(photo.status).toBe(302);
+    expect(photo.headers['cache-control']).toBe('private, no-store');
+    expect(photo.headers.location).toBe('https://lh3.googleusercontent.com/example');
+  });
+
+  it('tỉnh/thành trả ảnh bìa kèm nguồn của địa điểm đã công bố', async () => {
+    const photo: Photo = {
+      file: 'File:Van Mieu.jpg', pageUrl: 'https://commons.wikimedia.org/wiki/File:Van_Mieu.jpg',
+      thumbUrl: 'https://upload.wikimedia.org/example.jpg', author: 'Tác giả', license: 'CC BY 4.0', match: 'place', source: 'wikimedia',
+    };
+    const { app: withPhotos } = makeApp({}, { p3: photo, p5: photo });
+    const list = await request(withPhotos).get('/api/provinces');
+    const hanoi = list.body.items.find((p: { slug: string }) => p.slug === 'ha-noi');
+    expect(hanoi.coverPhoto).toMatchObject({ url: photo.thumbUrl, author: photo.author, license: photo.license, pageUrl: photo.pageUrl });
+    expect((await request(withPhotos).get('/api/provinces/ha-noi')).body.coverPhoto.url).toBe(photo.thumbUrl);
+    expect(list.body.items.find((p: { slug: string }) => p.slug === 'tp-ho-chi-minh').coverPhoto).toBeNull();
   });
 
   it('kết quả có tọa độ user thì không cache', async () => {

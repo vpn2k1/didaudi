@@ -19,11 +19,13 @@ const repo = await JsonPlaceRepository.open(join(config.DATA_DIR, 'places.json')
 // Ảnh (tùy chọn) – tạo bằng scripts/fetch-photos.mjs
 const photos = z.record(photoSchema).parse(await readJson('photos.json').catch(() => ({})));
 
-const provider: PlaceProvider =
-  config.PLACES_PROVIDER === 'google'
-    ? new GooglePlacesProvider({ apiKey: config.GOOGLE_PLACES_API_KEY!, provinces: () => provinces, taxonomy: () => taxonomy })
-    : new LocalPlaceProvider(repo, () => ({ provinces, taxonomy, photos }));
+const googleProvider = config.GOOGLE_PLACES_API_KEY
+  ? new GooglePlacesProvider({ apiKey: config.GOOGLE_PLACES_API_KEY, provinces: () => provinces, taxonomy: () => taxonomy })
+  : undefined;
+const provider: PlaceProvider = config.PLACES_PROVIDER === 'google'
+  ? googleProvider!
+  : new LocalPlaceProvider(repo, () => ({ provinces, taxonomy, photos }));
 
-createApp({ config, provider, repo, provinces, taxonomy, photos }).listen(config.PORT, () => {
+createApp({ config, provider, googleProvider, repo, provinces, taxonomy, photos }).listen(config.PORT, () => {
   console.log(`API: http://localhost:${config.PORT}/api  ·  provider=${provider.info.id}  ·  admin=${config.adminEnabled ? 'bật' : 'tắt'}`);
 });

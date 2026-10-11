@@ -2,7 +2,9 @@
 
 Website giúp trả lời **"Gần tôi có gì hay?"** và **"Hôm nay nên đi đâu?"**: quán ăn, cà phê, điểm du lịch, vui chơi theo vị trí người dùng hoặc theo tỉnh/thành.
 
-> ⚠️ Dữ liệu hiện tại là **dữ liệu minh họa** (74 địa điểm ở Hà Nội, Đà Nẵng, Ninh Bình). Nội dung do đội ngũ tự biên tập, **không có** rating, giá hay giờ mở cửa bịa đặt. Toàn bộ được gắn nhãn "Dữ liệu minh họa" và **không cho index**.
+Cho người bảo trì: [sơ đồ kiến trúc](docs/ARCHITECTURE.md), [hướng dẫn cho agent](AGENTS.md), [skill backend](skills/maintain-be/SKILL.md), [skill frontend Vite cũ](skills/maintain-fe/SKILL.md) và [skill biên tập địa điểm](skills/curate-places/SKILL.md).
+
+> ⚠️ Dữ liệu hiện tại là **dữ liệu minh họa** (140 địa điểm, có ít nhất một địa điểm kèm ảnh ở mỗi tỉnh/thành trong 34 tỉnh/thành). Các địa điểm mới chỉ là điểm khởi đầu cho từng tỉnh, chưa phải danh bạ du lịch đầy đủ. **Không có** rating, giá hay giờ mở cửa bịa đặt. Toàn bộ được gắn nhãn "Dữ liệu minh họa" và **không cho index**.
 
 ## Cấu trúc
 
@@ -44,9 +46,11 @@ Mở http://localhost:3000. API ở http://localhost:4000/api. Trình duyệt lu
 |---|---|
 | `npm run dev` | Chạy backend + web |
 | `npm run check` | typecheck → lint → test → build (chạy trước khi deploy) |
-| `npm test` | Test backend (35) + web (9) |
+| `npm test` | Test backend (38) + web (9) |
 | `npm run verify` | Báo cáo đối chiếu tọa độ với OpenStreetMap |
 | `node be/scripts/fetch-photos.mjs` | Lấy ảnh Wikimedia Commons (có ghi công) |
+| `node be/scripts/import-province-landmarks.mjs` | Xem trước gợi ý địa danh/ảnh cho các tỉnh còn trống; chỉ ghi khi thêm `--apply` sau khi duyệt |
+| `node be/scripts/curate-province-landmarks.mjs` | Xem trước ảnh/giấy phép của các địa danh tỉnh đã đối chiếu thủ công; `--apply` mới ghi file |
 
 ## Biến môi trường
 
@@ -56,10 +60,12 @@ Mở http://localhost:3000. API ở http://localhost:4000/api. Trình duyệt lu
 |---|---|---|
 | `PORT` | – | Mặc định 4000 |
 | `PLACES_PROVIDER` | – | `local` (mặc định) hoặc `google` |
-| `GOOGLE_PLACES_API_KEY` | khi `google` | Server key của Places API (New) |
+| `GOOGLE_PLACES_API_KEY` | khi dùng tìm kiếm Google | Server key của Places API (New) |
 | `ADMIN_PASSWORD` | để bật admin | ≥ 12 ký tự |
 | `ADMIN_SESSION_SECRET` | để bật admin | ≥ 32 ký tự ngẫu nhiên (`openssl rand -base64 48`) |
 | `TRUST_PROXY` | – | `1` nếu chạy sau reverse proxy |
+
+Khi đặt `GOOGLE_PLACES_API_KEY` nhưng giữ `PLACES_PROVIDER=local`, trang tìm kiếm vẫn dùng danh bạ minh họa và hiện nút **Xem kết quả Google Maps tại đây**. Nút này chỉ gọi Google Places khi người dùng bấm; mỗi lần tối đa 20 kết quả kèm ảnh đầu tiên nếu có, tác giả và liên kết Google Maps. Ảnh tải theo yêu cầu qua server, không lộ key và không lưu vào `places.json` hay `photos.json`. Không có key, liên kết **Tìm thêm trên Google Maps** vẫn mở đúng truy vấn tên/tỉnh trực tiếp trên Google Maps. Xem [nguồn dữ liệu](docs/DATA_SOURCES.md).
 
 **`web/.env.local`** (biến `NEXT_PUBLIC_*` sẽ lộ ra trình duyệt):
 
@@ -92,7 +98,8 @@ Trang chủ có 5 lựa chọn lớn: **Du lịch & chụp ảnh · Hẹn hò ·
 
 ### Ảnh địa điểm
 - Ảnh thật lấy từ **Wikimedia Commons** (giấy phép tự do) qua API chính thức, bằng script `be/scripts/fetch-photos.mjs`. Kết quả lưu ở `be/data/photos.json` kèm **tác giả + giấy phép**, hiển thị ghi công trên từng ảnh.
-- Hiện có 67/74 địa điểm có ảnh: 45 ảnh đúng địa điểm (ưu tiên liên kết Wikidata/Commons trên đối tượng OSM), 22 ảnh **món ăn/chủ đề**, được ghi rõ "ảnh minh họa món" và không trình bày như ảnh của quán. 7 điểm chưa có ảnh dùng ảnh vẽ dự phòng (`web/public/illustrations`), có ghi "Ảnh vẽ".
+- Hiện có 133/140 địa điểm có ảnh: 111 ảnh đúng địa điểm, 22 ảnh **món ăn/chủ đề**, được ghi rõ "ảnh minh họa" và không trình bày như ảnh của quán. 7 điểm chưa có ảnh dùng ảnh vẽ dự phòng (`web/public/illustrations`), có ghi "Ảnh vẽ". Trang tỉnh/thành và các thẻ địa điểm hiển thị tác giả, giấy phép, liên kết nguồn ngay dưới ảnh.
+- Nguồn địa danh, tọa độ và ảnh của 66 điểm mới được lưu riêng tại `be/data/place-sources.json`. Ảnh dùng URL thumbnail của Commons, không tải về kho dữ liệu. Một số tọa độ là tâm địa danh rộng (đảo, hồ, vườn quốc gia), cần kiểm tra lối vào trước khi đi. Xem [quy trình mở rộng dữ liệu](docs/DATA_SOURCES.md) để tìm theo tên/tỉnh và rà ảnh/giấy phép trước khi thêm.
 - **Không** lấy ảnh từ Google Maps bằng cách tải/cào (vi phạm điều khoản, ảnh thuộc bản quyền người đăng). Muốn dùng ảnh Google: tích hợp **Places API (New) – Place Photos** ở server (cần key, tính phí theo lượt, phải hiển thị tên tác giả theo `authorAttributions`, không lưu ảnh), và lưu ý điều khoản không cho hiển thị nội dung Places cạnh bản đồ không phải Google.
 - Duyệt ảnh: chạy `node be/scripts/fetch-photos.mjs`, xem bảng báo cáo, sửa hoặc xóa mục sai trong `photos.json`. Đặt `"locked": true` để giữ ảnh đã duyệt. `--force` lấy lại tất cả, `--only=id1,id2` chỉ lấy các điểm chỉ định.
 
@@ -116,7 +123,7 @@ Trang chủ có 5 lựa chọn lớn: **Du lịch & chụp ảnh · Hẹn hò ·
   - Có fallback khi chưa cấu hình, khi lỗi WebGL/style, hoặc khi dữ liệu Google bắt buộc phải hiển thị trên bản đồ Google.
   - Nhãn bản đồ hiển thị tên tiếng Việt.
 - **Trang chi tiết:** danh mục, địa chỉ, tọa độ, mô tả. Giá, giờ mở cửa, website, điện thoại và rating chỉ hiện khi có dữ liệu. Có trạng thái xác minh, nguồn/attribution, link tới đối tượng OSM, nút "Mở trên Google Maps" và "Chỉ đường", cùng mục địa điểm gần đó.
-- **Trang tỉnh/thành:** `/ha-noi`, `/da-nang`, `/ninh-binh`… cho cả 34 đơn vị, lấy từ `data/provinces.json`. Có metadata và canonical riêng. Tỉnh chưa có dữ liệu sẽ hiện empty state và `noindex`.
+- **Trang tỉnh/thành:** `/ha-noi`, `/da-nang`, `/ninh-binh`… cho cả 34 đơn vị, lấy từ `data/provinces.json`. Có metadata và canonical riêng. Cả 34 trang hiện có ít nhất một địa điểm kèm ảnh; dữ liệu minh họa vẫn `noindex`.
 - **Admin (`/admin`):**
   - Đăng nhập bằng mật khẩu, cookie `HttpOnly; SameSite=Strict` ký HMAC, phiên 8 giờ.
   - Mọi request ghi bắt buộc có header chống CSRF. Đăng nhập bị giới hạn 10 lần/15 phút.
@@ -135,7 +142,7 @@ Trang chủ có 5 lựa chọn lớn: **Du lịch & chụp ảnh · Hẹn hò ·
 
 - `PlaceProvider` (`be/src/providers/PlaceProvider.ts`) là interface để UI không phụ thuộc nguồn dữ liệu.
   - `LocalPlaceProvider`: dữ liệu nội bộ, quản lý qua admin. Ở local chạy với dữ liệu minh họa nên không cần API key; đây chính là "MockPlaceProvider" trong đặc tả.
-  - `GooglePlacesProvider`: Places API (New), **chỉ chạy ở server**. Dùng field mask tối thiểu (không lấy reviews/photos), timeout 8 giây, retry 1 lần, **không cache hay lưu** nội dung Google. Báo `requiresProviderMap` (frontend sẽ ẩn bản đồ MapLibre) và `indexable: false`. Có unit test với fetch giả lập; **chưa chạy với key thật**.
+  - `GooglePlacesProvider`: Places API (New), **chỉ chạy ở server**. Lấy thông tin và ảnh đầu tiên khi tìm; ảnh đi qua endpoint server để giữ kín key, hiển thị tác giả và nguồn Google Maps. Không lấy reviews, không cache hay lưu nội dung Google. Timeout 8 giây, retry 1 lần cho tìm kiếm; báo `requiresProviderMap` và `indexable: false`. Có unit test với fetch giả lập; **chưa chạy với key thật**.
 - `PlaceRepository`: hiện lưu vào file JSON (ghi tuần tự, ghi file tạm rồi đổi tên). Bước tiếp theo là PostgreSQL + PostGIS (`be/db/schema.sql`).
 - **Xếp hạng giải thích được:**
   - Khớp từ khóa: tên > thẻ/danh mục > địa chỉ/mô tả. Có ưu tiên khớp đúng thẻ và đúng dấu để phân biệt "phở" với "phố".
@@ -146,7 +153,7 @@ Trang chủ có 5 lựa chọn lớn: **Du lịch & chụp ảnh · Hẹn hò ·
 
 ### Độ chính xác tọa độ
 
-52/74 địa điểm đã đối chiếu với OpenStreetMap (`verificationStatus: coordinates_checked`). 22 điểm còn lại là `unverified`, marker viền nét đứt.
+52/140 địa điểm đã đối chiếu với OpenStreetMap (`verificationStatus: coordinates_checked`). 88 điểm còn lại là `unverified`, marker viền nét đứt. Các điểm mới có liên kết nguồn tọa độ nhưng vẫn giữ `unverified` cho đến khi được kiểm tra theo quy trình xác minh.
 
 Quy trình bổ sung:
 

@@ -8,6 +8,8 @@ import type { Category, LatLng, Meta, Province, SearchResponse, SortMode } from 
 import { CATEGORY_ICON, Icon } from './Icon';
 import { MapView } from './MapView';
 import { PlaceCard } from './PlaceCard';
+import { PlaceImage } from './PlaceImage';
+import { PhotoAttribution } from './PhotoAttribution';
 import { SelectedPlaceCard } from './SelectedPlaceCard';
 import { Chip, Notice, PlaceCardSkeleton } from './ui';
 import { useUserLocation, type LocationStatus } from './useUserLocation';
@@ -72,6 +74,9 @@ export function ExploreView({ meta, provinces, province, initial, initialQuery }
   const [loading, setLoading] = useState(!initial);
   const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [googleData, setGoogleData] = useState<SearchResponse | null>(null);
+  const [googleLoading, setGoogleLoading] = useState(false);
+  const [googleError, setGoogleError] = useState<string | null>(null);
   const [reloadKey, setReloadKey] = useState(0);
 
   const [selected, setSelected] = useState<string | null>(null);
@@ -79,6 +84,7 @@ export function ExploreView({ meta, provinces, province, initial, initialQuery }
   const [view, setView] = useState<'list' | 'map'>('list');
   const provinceSelect = useRef<HTMLSelectElement>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
+  const googleRequest = useRef<AbortController | null>(null);
   const skipFirst = useRef(!!initial);
 
   const params = useMemo(
@@ -99,6 +105,10 @@ export function ExploreView({ meta, provinces, province, initial, initialQuery }
 
   // Tải trang 1 mỗi khi bộ lọc đổi; hủy request cũ để tránh kết quả lệch
   useEffect(() => {
+    googleRequest.current?.abort();
+    setGoogleData(null);
+    setGoogleError(null);
+    setGoogleLoading(false);
     if (skipFirst.current) {
       skipFirst.current = false;
       return;
@@ -178,6 +188,28 @@ export function ExploreView({ meta, provinces, province, initial, initialQuery }
     setCategory(null);
     setCheap(false);
     setOpenNow(false);
+  };
+
+  const categoryLabel = meta.categories.find((item) => item.id === category)?.label;
+  const googleQuery = [debouncedQ || categoryLabel || 'địa điểm du lịch', nearActive ? 'gần tôi' : province?.name, 'Việt Nam'].filter(Boolean).join(' ');
+  const googleMapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(googleQuery)}`;
+  const searchGoogle = async () => {
+    googleRequest.current?.abort();
+    const ctrl = new AbortController();
+    googleRequest.current = ctrl;
+    setGoogleLoading(true);
+    setGoogleError(null);
+    try {
+      const result = await clientApi.googleSearch({ ...params, limit: 20 }, ctrl.signal);
+      setGoogleData(result);
+    } catch (e) {
+      if (!ctrl.signal.aborted) setGoogleError(e instanceof ApiError ? e.message : 'Không tải được kết quả từ Google Maps.');
+    } finally {
+      if (googleRequest.current === ctrl) {
+        googleRequest.current = null;
+        setGoogleLoading(false);
+      }
+    }
   };
 
   const locMsg = LOCATION_MESSAGE[location.status];
@@ -270,6 +302,16 @@ export function ExploreView({ meta, provinces, province, initial, initialQuery }
             </Chip>
           )}
         </div>
+        <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">
+          <a href={googleMapsSearchUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-700 underline underline-offset-2 hover:text-brand-900">
+            Tìm thêm trên Google Maps ↗
+          </a>
+          {meta.googleSearchAvailable && provider.id === 'local' && (
+            <button type="button" onClick={searchGoogle} disabled={googleLoading} className="rounded-full bg-brand-50 px-3 py-1.5 font-semibold text-brand-700 ring-1 ring-brand-100 hover:bg-brand-100 disabled:opacity-60">
+              {googleLoading ? 'Đang tìm trên Google Maps…' : 'Xem kết quả Google Maps tại đây'}
+            </button>
+          )}
+        </div>
       </section>
 
       {/* Trạng thái vị trí */}
@@ -304,6 +346,42 @@ export function ExploreView({ meta, provinces, province, initial, initialQuery }
             </Notice>
           )}
         </div>
+      )}
+
+      {(googleData || googleError) && (
+        <section aria-label="Kết quả Google Maps" className="mt-6 rounded-3xl bg-surface p-4 ring-1 ring-line md:p-6">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-lg font-bold">Kết quả trực tiếp từ Google Maps</h2>
+            <span translate="no" className="font-sans text-sm font-normal text-[#5e5e5e]">Google Maps</span>
+          </div>
+          {googleError && <p className="mt-3 text-sm text-red-700">{googleError}</p>}
+          {googleData && (
+            <>
+              <p className="mt-1 text-xs text-muted">Tối đa 20 kết quả cho lần tìm này. Mở địa điểm trên Google Maps để xem thêm thông tin.</p>
+              {googleData.items.length === 0 ? <p className="mt-4 text-sm text-muted">Không tìm thấy địa điểm phù hợp.</p> : (
+                <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {googleData.items.map((item) => (
+                    <article key={item.id} className="rounded-2xl bg-canvas p-4 ring-1 ring-line">
+                      {item.photo && (
+                        <>
+                          <PlaceImage place={item} className="mb-2 h-36 rounded-xl" credit="none" />
+                          <PhotoAttribution photo={item.photo} className="mb-2" />
+                        </>
+                      )}
+                      <a href={item.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-700 hover:underline">{item.name} ↗</a>
+                      {item.address && <p className="mt-1 text-sm text-muted">{item.address}</p>}
+                      <div className="mt-2 flex flex-wrap gap-2 text-xs text-muted">
+                        {item.rating != null && <span>★ {item.rating.toFixed(1)}{item.ratingCount != null && ` (${item.ratingCount})`}</span>}
+                        {item.openStatus === 'open' && <span>Đang mở cửa</span>}
+                        {item.openStatus === 'closed' && <span>Đã đóng cửa</span>}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              )}
+            </>
+          )}
+        </section>
       )}
 
       {featured.length > 0 && view === 'list' && (

@@ -28,6 +28,7 @@ async function parse<T>(res: Response): Promise<T> {
 /** Gọi API từ trình duyệt (qua rewrite /api của Next.js → backend). */
 export const clientApi = {
   search: (params: SearchParams, signal?: AbortSignal) => fetch(`/api/places/search${toQuery(params)}`, { signal }).then(parse<SearchResponse>),
+  googleSearch: (params: SearchParams, signal?: AbortSignal) => fetch(`/api/google/places/search${toQuery(params)}`, { signal, cache: 'no-store' }).then(parse<SearchResponse>),
   plan: (params: SearchParams, signal?: AbortSignal) => fetch(`/api/plan${toQuery(params)}`, { signal }).then(parse<{ plan: PlanResult; provider: ProviderInfo }>),
   suggest: (q: string, signal?: AbortSignal) => fetch(`/api/suggest${toQuery({ q })}`, { signal }).then(parse<{ items: LocationSuggestion[] }>),
 };

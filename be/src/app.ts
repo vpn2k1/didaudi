@@ -12,6 +12,7 @@ import type { Taxonomy } from './services/search.js';
 export interface AppDeps {
   config: Config;
   provider: PlaceProvider;
+  googleProvider?: PlaceProvider & { photoUri(name: string, maxWidthPx?: number): Promise<string> };
   repo: PlaceRepository;
   provinces: Province[];
   taxonomy: Taxonomy;
@@ -36,7 +37,7 @@ export function createApp(deps: AppDeps) {
 
   const provinces = () => deps.provinces;
   const taxonomy = () => deps.taxonomy;
-  app.use('/api', publicRoutes({ provider: deps.provider, repo: deps.repo, provinces, taxonomy, photos: deps.photos ?? {} }));
+  app.use('/api', publicRoutes({ provider: deps.provider, googleProvider: deps.googleProvider, repo: deps.repo, provinces, taxonomy, photos: deps.photos ?? {} }));
   app.use('/api/admin', adminRoutes({ config: deps.config, repo: deps.repo, provinces, taxonomy }));
 
   app.use('/api', (_req, res) => res.status(404).json({ error: 'NOT_FOUND', message: 'Không có endpoint này' }));

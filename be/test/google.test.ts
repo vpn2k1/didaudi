@@ -14,6 +14,7 @@ const gPlace = {
   userRatingCount: 120,
   googleMapsUri: 'https://maps.google.com/?cid=1',
   currentOpeningHours: { openNow: true },
+  photos: [{ name: 'places/ChIJabcdefghijk/photos/abcdefghijk', authorAttributions: [{ displayName: 'Tác giả ảnh', uri: 'https://maps.google.com/maps/contrib/123' }] }],
 };
 
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json' } });
@@ -28,13 +29,25 @@ describe('GooglePlacesProvider', () => {
     expect(url).not.toContain(KEY);
     expect(init.headers['X-Goog-Api-Key']).toBe(KEY);
     expect(init.headers['X-Goog-FieldMask']).not.toContain('reviews');
-    expect(init.headers['X-Goog-FieldMask']).not.toContain('photos');
+    expect(init.headers['X-Goog-FieldMask']).toContain('places.photos');
     const body = JSON.parse(init.body as string);
     expect(body.includedType).toBe('restaurant');
     expect(body.locationBias.circle.center).toEqual({ latitude: 21.03, longitude: 105.86 });
 
     expect(r.items[0]).toMatchObject({ slug: `g-${gPlace.id}`, category: 'food', rating: 4.6, openStatus: 'open', source: 'google', isDemo: false });
+    expect(r.items[0]?.photo).toMatchObject({ author: 'Tác giả ảnh', source: 'google', pageUrl: gPlace.googleMapsUri });
     expect(JSON.stringify(r)).not.toContain(KEY);
+  });
+
+  it('ảnh được lấy qua server bằng key trong header, URL trả về không chứa key', async () => {
+    const fetchImpl = vi.fn(async () => json({ photoUri: 'https://lh3.googleusercontent.com/photo-example' }));
+    const provider = make(fetchImpl as unknown as typeof fetch);
+    await expect(provider.photoUri('places/ChIJabcdefghijk/photos/abcdefghijk')).resolves.toBe('https://lh3.googleusercontent.com/photo-example');
+    const [url, init] = fetchImpl.mock.calls[0] as unknown as [string, RequestInit & { headers: Record<string, string> }];
+    expect(url).toContain('skipHttpRedirect=true');
+    expect(url).not.toContain(KEY);
+    expect(init.headers['X-Goog-Api-Key']).toBe(KEY);
+    await expect(provider.photoUri('https://example.com/evil')).rejects.toThrow(/không hợp lệ/);
   });
 
   it('retry 1 lần khi lỗi 5xx, không retry vô hạn', async () => {

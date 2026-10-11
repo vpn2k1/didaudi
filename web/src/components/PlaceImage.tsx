@@ -21,7 +21,7 @@ export function PlaceImage({ place, photo, illustration, className = '', credit 
   const real = photo ?? place?.photo ?? null;
   const fallback = illustration ?? (place ? illustrationFor(place) : 'lake');
   const hue = !real && place ? hueFor(place.slug) : 0;
-  const creditText = real ? `Ảnh: ${real.author} · ${real.license} · Wikimedia Commons${real.match === 'topic' ? ' (ảnh minh họa món/chủ đề, không phải ảnh của địa điểm)' : ''}` : 'Ảnh vẽ minh họa – chưa có ảnh thật';
+  const creditText = real ? `Ảnh: ${real.author} · ${real.source === 'google' ? 'Google Maps' : `${real.license} · Wikimedia Commons`}${real.match === 'topic' ? ' (ảnh minh họa món/chủ đề, không phải ảnh của địa điểm)' : ''}` : 'Ảnh vẽ minh họa – chưa có ảnh thật';
 
   // Không ép "relative" khi nơi dùng đã đặt "absolute" (nếu không khung ảnh sẽ cao 0)
   const position = /(^|\s)(absolute|fixed)(\s|$)/.test(className) ? '' : 'relative';
@@ -43,7 +43,7 @@ export function PlaceImage({ place, photo, illustration, className = '', credit 
           {real ? (
             <a href={real.pageUrl} target="_blank" rel="noreferrer" className="hover:underline">
               {real.match === 'topic' && <span className="mr-1 rounded bg-white/20 px-1">Ảnh minh họa món</span>}
-              Ảnh: {real.author} · {real.license} · Wikimedia Commons
+              Ảnh: {real.author} · {real.source === 'google' ? 'Google Maps' : `${real.license} · Wikimedia Commons`}
             </a>
           ) : (
             'Ảnh vẽ minh họa'
@@ -60,7 +60,7 @@ export function PlaceImage({ place, photo, illustration, className = '', credit 
             aria-label={creditText}
             className="absolute bottom-1.5 right-1.5 z-10 rounded-full bg-black/50 px-1.5 py-0.5 text-[9px] font-semibold text-white/90 backdrop-blur-sm hover:bg-black/70"
           >
-            © {real.match === 'topic' ? 'minh họa' : real.license}
+            © {real.match === 'topic' ? 'minh họa' : real.source === 'google' ? 'Google Maps' : real.license}
           </a>
         ) : (
           <span title={creditText} className="absolute bottom-1.5 right-1.5 rounded-full bg-black/45 px-1.5 py-0.5 text-[9px] font-medium uppercase tracking-wide text-white/90 backdrop-blur-sm">

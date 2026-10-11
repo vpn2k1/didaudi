@@ -26,6 +26,7 @@ const SEARCH_FIELDS = [
   'places.userRatingCount',
   'places.googleMapsUri',
   'places.currentOpeningHours.openNow',
+  'places.photos',
 ].join(',');
 const DETAIL_FIELDS = [
   'id',
@@ -40,6 +41,7 @@ const DETAIL_FIELDS = [
   'nationalPhoneNumber',
   'regularOpeningHours.periods',
   'currentOpeningHours.openNow',
+  'photos',
 ].join(',');
 
 const INCLUDED_TYPE: Record<Category, string> = {
@@ -68,6 +70,7 @@ interface GPlace {
   nationalPhoneNumber?: string;
   currentOpeningHours?: { openNow?: boolean };
   regularOpeningHours?: { periods?: { open: { day: number; hour: number; minute: number }; close?: { day: number; hour: number; minute: number } }[] };
+  photos?: { name: string; authorAttributions?: { displayName?: string; uri?: string; photoUri?: string }[] }[];
 }
 
 export interface GoogleProviderOptions {
@@ -85,6 +88,16 @@ export function smoothedRating(rating: number | undefined, count: number | undef
 }
 
 const pad = (n: number) => String(n).padStart(2, '0');
+const googleAttributionUrl = (value?: string): string | null => {
+  if (!value) return null;
+  try {
+    const url = new URL(value, 'https://maps.google.com');
+    if (url.protocol !== 'https:' || !/(^|\.)(google\.com|googleusercontent\.com)$/.test(url.hostname)) return null;
+    return url.toString();
+  } catch {
+    return null;
+  }
+};
 
 export class GooglePlacesProvider implements PlaceProvider {
   readonly info: ProviderInfo = {
@@ -132,6 +145,10 @@ export class GooglePlacesProvider implements PlaceProvider {
   private toSummary(g: GPlace, index: number, matched: boolean): PlaceSummary {
     const smooth = smoothedRating(g.rating, g.userRatingCount);
     const openStatus: OpenStatus = g.currentOpeningHours?.openNow == null ? 'unknown' : g.currentOpeningHours.openNow ? 'open' : 'closed';
+    const mapsUrl = g.googleMapsUri ?? `https://www.google.com/maps/search/?api=1&query=Google&query_place_id=${encodeURIComponent(g.id)}`;
+    const firstPhoto = g.photos?.[0];
+    const authors = firstPhoto?.authorAttributions?.map((author) => author.displayName).filter(Boolean).join(', ');
+    const firstAuthor = firstPhoto?.authorAttributions?.[0];
     return {
       id: `g-${g.id}`,
       slug: `g-${g.id}`,
@@ -147,19 +164,45 @@ export class GooglePlacesProvider implements PlaceProvider {
       priceMin: null,
       priceMax: null,
       priceLevel: null,
-      photo: null,
+      photo: firstPhoto?.name ? {
+        url: `/api/google/photo?name=${encodeURIComponent(firstPhoto.name)}`,
+        pageUrl: mapsUrl,
+        author: authors || 'Google Maps',
+        authorUrl: googleAttributionUrl(firstAuthor?.uri), authorAvatarUrl: googleAttributionUrl(firstAuthor?.photoUri),
+        license: 'Google Maps', licenseUrl: null, match: 'place', source: 'google',
+      } : null,
       rating: g.rating ?? null,
       ratingCount: g.userRatingCount ?? null,
       openStatus,
       verificationStatus: 'unverified',
       isDemo: false,
       editorPick: false,
-      googleMapsUrl: g.googleMapsUri ?? `https://www.google.com/maps/search/?api=1&query=Google&query_place_id=${encodeURIComponent(g.id)}`,
+      googleMapsUrl: mapsUrl,
       source: 'google',
       // Thứ tự liên quan của Google + rating đã làm mượt
       score: Math.round((Math.max(0, 3 - index * 0.1) + (smooth ?? 0) / 2) * 100) / 100,
       reasons: matched ? ['Khớp tìm kiếm'] : [],
     };
+  }
+
+  /** Lấy URL ảnh ngắn hạn qua server để API key không xuất hiện trong HTML/JS. Không cache tên ảnh. */
+  async photoUri(name: string, maxWidthPx = 480): Promise<string> {
+    if (!/^places\/[A-Za-z0-9_-]{10,300}\/photos\/[A-Za-z0-9_-]{5,1400}$/.test(name) || !Number.isInteger(maxWidthPx) || maxWidthPx < 1 || maxWidthPx > 1200) {
+      throw new ProviderError('Tên ảnh Google không hợp lệ', 400);
+    }
+    const url = new URL(`${API}/${name}/media`);
+    url.searchParams.set('maxWidthPx', String(maxWidthPx));
+    url.searchParams.set('skipHttpRedirect', 'true');
+    let response: Response;
+    try {
+      response = await this.fetchImpl(url.toString(), { headers: { 'X-Goog-Api-Key': this.opts.apiKey }, signal: AbortSignal.timeout(this.opts.timeoutMs ?? 8000) });
+    } catch {
+      throw new ProviderError('Không tải được ảnh Google Maps');
+    }
+    if (!response.ok) throw new ProviderError(`Google Maps không trả ảnh (${response.status})`, response.status === 404 ? 404 : 502);
+    const { photoUri } = await response.json() as { photoUri?: string };
+    if (!photoUri || !/^https:\/\/[^/]+\.googleusercontent\.com\//.test(photoUri)) throw new ProviderError('URL ảnh Google Maps không hợp lệ');
+    return photoUri;
   }
 
   async search(query: SearchQuery): Promise<SearchResult> {

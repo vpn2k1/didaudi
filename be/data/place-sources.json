@@ -1,0 +1,398 @@
+{
+  "thac-ban-gioc": {
+    "place": "https://www.wikidata.org/wiki/Q983252",
+    "coordinates": "https://www.wikidata.org/wiki/Q983252#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Ban_Gioc_-_Detian_Falls2.jpg",
+    "reviewedAt": null
+  },
+  "dai-noi-hue": {
+    "place": "https://www.wikidata.org/wiki/Q10769129",
+    "coordinates": "https://www.wikidata.org/wiki/Q10769129#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Citadel_Hue.jpg",
+    "reviewedAt": null
+  },
+  "dinh-doc-lap": {
+    "place": "https://www.wikidata.org/wiki/Q933384",
+    "coordinates": "https://www.wikidata.org/wiki/Q933384#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:20190923_Independence_Palace-10.jpg",
+    "reviewedAt": null
+  },
+  "vinh-ha-long": {
+    "place": "https://www.wikidata.org/wiki/Q190128",
+    "coordinates": "https://www.wikidata.org/wiki/Q190128#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Halong_Bay_in_Vietnam.jpg",
+    "reviewedAt": null
+  },
+  "den-hung": {
+    "place": "https://www.wikidata.org/wiki/Q5964889",
+    "coordinates": "https://www.wikidata.org/wiki/Q5964889#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Mausoleum_of_Hung_King.JPG",
+    "reviewedAt": null
+  },
+  "chua-but-thap": {
+    "place": "https://www.wikidata.org/wiki/Q1091048",
+    "coordinates": "https://www.wikidata.org/wiki/Q1091048#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:VN_But_Thap3_tango7174.jpg",
+    "reviewedAt": null
+  },
+  "vuon-quoc-gia-phong-nha-ke-bang": {
+    "place": "https://www.wikidata.org/wiki/Q23513",
+    "coordinates": "https://www.wikidata.org/wiki/Q23513#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Phongnhakebang6.jpg",
+    "reviewedAt": null
+  },
+  "dao-ly-son": {
+    "place": "https://www.wikidata.org/wiki/Q1320095",
+    "coordinates": "https://www.wikidata.org/wiki/Q1320095#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Ly_Son3.jpg",
+    "reviewedAt": null
+  },
+  "thap-ba-ponagar": {
+    "place": "https://www.wikidata.org/wiki/Q600269",
+    "coordinates": "https://www.wikidata.org/wiki/Q600269#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:04052023_Ponagar_Hindu_temples_complex,_Nha_Trang_Vietnam_-_240.jpg",
+    "reviewedAt": null
+  },
+  "ho-xuan-huong": {
+    "place": "https://www.wikidata.org/wiki/Q10772055",
+    "coordinates": "https://www.wikidata.org/wiki/Q10772055#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Ho_Xuan_Huong_-_Huy_Phuong_1.jpg",
+    "reviewedAt": null
+  },
+  "nui-ba-den": {
+    "place": "https://www.wikidata.org/wiki/Q4922113",
+    "coordinates": "https://www.wikidata.org/wiki/Q4922113#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:N%C3%BAi_B%C3%A0_%C4%90en,_2021.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "chua-vinh-trang": {
+    "place": "https://www.wikidata.org/wiki/Q16742066",
+    "coordinates": "https://www.wikidata.org/wiki/Q7932540#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Vinh_Trang_Pagoda.JPG",
+    "reviewedAt": "2026-10-11"
+  },
+  "mui-ca-mau": {
+    "place": "https://www.wikidata.org/wiki/Q1394226",
+    "coordinates": "https://www.wikidata.org/wiki/Q1394226#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Mui_Ca_Mau_005.JPG",
+    "reviewedAt": null
+  },
+  "deo-o-quy-ho": {
+    "place": "https://www.wikidata.org/wiki/Q10840552",
+    "coordinates": "https://www.wikidata.org/wiki/Q10840552#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:O_Quy_Ho_pass.jpg",
+    "reviewedAt": null
+  },
+  "ho-ba-be": {
+    "place": "https://www.wikidata.org/wiki/Q1328473",
+    "coordinates": "https://www.wikidata.org/wiki/Q1328473#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Babenp_2007_01_3.jpg",
+    "reviewedAt": null
+  },
+  "ho-lak": {
+    "place": "https://www.wikidata.org/wiki/Q10771975",
+    "coordinates": "https://www.wikidata.org/wiki/Q10771975#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:LakLake.jpg",
+    "reviewedAt": null
+  },
+  "vuon-quoc-gia-cat-tien": {
+    "place": "https://www.wikidata.org/wiki/Q1421202",
+    "coordinates": "https://www.wikidata.org/wiki/Q1421202#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Cat_Tien_National_Park,_Vietnam.jpg",
+    "reviewedAt": null
+  },
+  "cho-noi-cai-rang": {
+    "place": "https://en.wikipedia.org/wiki/C%C3%A1i_R%C4%83ng_Floating_Market",
+    "coordinates": "https://en.wikipedia.org/wiki/C%C3%A1i_R%C4%83ng_Floating_Market",
+    "photo": "https://commons.wikimedia.org/wiki/File:M%E1%BB%99t_c%E1%BA%A3nh_%E1%BB%9F_ch%E1%BB%A3_n%E1%BB%95i_C%C3%A1i_R%C4%83ng.jpg",
+    "reviewedAt": null
+  },
+  "dao-cat-ba": {
+    "place": "https://en.wikipedia.org/wiki/C%C3%A1t_B%C3%A0_Island",
+    "coordinates": "https://en.wikipedia.org/wiki/C%C3%A1t_B%C3%A0_Island",
+    "photo": "https://commons.wikimedia.org/wiki/File:Cat_Ba_Island.jpg",
+    "reviewedAt": null
+  },
+  "doi-a1": {
+    "place": "https://dienbien.gov.vn/en/bai-viet/A1-HILL-RELIC-ELIAN-2-zx8e81",
+    "coordinates": "https://mapcarta.com/N4275582395",
+    "photo": "https://commons.wikimedia.org/wiki/File:Crater_Left_by_Vietminh_Dynamite_Blast_-_Hill_A1_(Eliane_2)_-_Dien_Bien_Phu_-_Vietnam_(48168795271).jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "thac-dai-yem": {
+    "place": "https://commons.wikimedia.org/wiki/Category:Dai_Yem_Waterfall",
+    "coordinates": "https://mapcarta.com/N4958586922",
+    "photo": "https://commons.wikimedia.org/wiki/File:Thacdaiyem.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "dong-tam-thanh": {
+    "place": "https://mapcarta.com/N5602133184",
+    "coordinates": "https://mapcarta.com/N5602133184",
+    "photo": "https://commons.wikimedia.org/wiki/File:Trong_%C4%91%E1%BB%99ng_Tam_Thanh.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "vuon-quoc-gia-pu-mat": {
+    "place": "https://en.wikipedia.org/wiki/P%C3%B9_M%C3%A1t_National_Park",
+    "coordinates": "https://en.wikipedia.org/wiki/P%C3%B9_M%C3%A1t_National_Park",
+    "photo": "https://commons.wikimedia.org/wiki/File:Annamite_range_pu_mat_2007_05.jpg",
+    "reviewedAt": null
+  },
+  "bien-thien-cam": {
+    "place": "https://tanitour.vn/thien-cam-beach/",
+    "coordinates": "https://tanitour.vn/thien-cam-beach/",
+    "photo": "https://commons.wikimedia.org/wiki/File:Thiencambeach.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "cot-co-lung-cu": {
+    "place": "https://en.wikipedia.org/wiki/Lung_Cu_Flag_Tower",
+    "coordinates": "https://en.wikipedia.org/wiki/Lung_Cu_Flag_Tower",
+    "photo": "https://commons.wikimedia.org/wiki/File:To%C3%A0n_c%E1%BA%A3nh.jpg",
+    "reviewedAt": null
+  },
+  "dinh-fansipan": {
+    "place": "https://en.wikipedia.org/wiki/Fansipan",
+    "coordinates": "https://en.wikipedia.org/wiki/Fansipan",
+    "photo": "https://commons.wikimedia.org/wiki/File:Fansipan_Summit.jpg",
+    "reviewedAt": null
+  },
+  "chua-keo": {
+    "place": "https://mapcarta.com/29485060",
+    "coordinates": "https://mapcarta.com/29485060",
+    "photo": "https://commons.wikimedia.org/wiki/File:Chuakeothaibinh.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "vuon-quoc-gia-tram-chim": {
+    "place": "https://nbca.gov.vn/vuon-quoc-gia-tram-chim-dong-thap/",
+    "coordinates": "https://en.wikipedia.org/wiki/Tr%C3%A0m_Chim_National_Park",
+    "photo": "https://commons.wikimedia.org/wiki/File:V%C6%B0%E1%BB%9Dn_Qu%E1%BB%91c_Gia_Tr%C3%A0m_Chim,_Ph%C3%BA_Hi%E1%BB%87p,Tam_Nong,_%C4%90%E1%BB%93ng_th%C3%A1p,_Vietnam_-_panoramio.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "rung-tram-tra-su": {
+    "place": "https://commons.wikimedia.org/wiki/Category:Tra_Su_Forest",
+    "coordinates": "https://mapcarta.com/W170193928",
+    "photo": "https://commons.wikimedia.org/wiki/File:R%E1%BB%ABng_Tr%C3%A0m_Tr%C3%A0_S%C6%B0.JPG",
+    "reviewedAt": "2026-10-11"
+  },
+  "thanh-nha-ho": {
+    "place": "https://whc.unesco.org/en/list/1358/",
+    "coordinates": "https://commons.wikimedia.org/wiki/Category:Citadel_of_the_H%E1%BB%93_Dynasty",
+    "photo": "https://commons.wikimedia.org/wiki/File:Ho_dynasty%27s_citadel,_Vietnam.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "bien-ho": {
+    "place": "https://mapcarta.com/15521526",
+    "coordinates": "https://mapcarta.com/15521526",
+    "photo": "https://commons.wikimedia.org/wiki/File:Bi%E1%BB%83n_H%E1%BB%93_-_Pleiku,_Gia_Lai,_Vi%E1%BB%87t_Nam_(cropped).jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "ao-ba-om": {
+    "place": "https://vinhlong.gov.vn/du-khach-old/diadanh_test",
+    "coordinates": "https://tanitour.vn/ao-ba-om/",
+    "photo": "https://commons.wikimedia.org/wiki/File:Ao_B%C3%A0_Om.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "dong-nguom-ngao": {
+    "place": "http://www.wikidata.org/entity/Q10842294",
+    "coordinates": "http://www.wikidata.org/entity/Q10842294#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%99ng_Ng%C6%B0%E1%BB%9Dm_Ngao.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "chua-dau": {
+    "place": "http://www.wikidata.org/entity/Q2857598",
+    "coordinates": "http://www.wikidata.org/entity/Q2857598#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Dau_pagoda.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "den-do": {
+    "place": "http://www.wikidata.org/entity/Q180566",
+    "coordinates": "http://www.wikidata.org/entity/Q180566#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%81n_%C4%90%C3%B4_%C4%90%C3%ACnh_B%E1%BA%A3ng.jpeg",
+    "reviewedAt": "2026-10-11"
+  },
+  "bao-tang-can-tho": {
+    "place": "http://www.wikidata.org/entity/Q5029086",
+    "coordinates": "http://www.wikidata.org/entity/Q5029086#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Can_Tho_Museum.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "vuon-quoc-gia-yok-don": {
+    "place": "http://www.wikidata.org/entity/Q286546",
+    "coordinates": "http://www.wikidata.org/entity/Q286546#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Yokdon7.JPG",
+    "reviewedAt": "2026-10-11"
+  },
+  "thap-nhan": {
+    "place": "http://www.wikidata.org/entity/Q10825850",
+    "coordinates": "http://www.wikidata.org/entity/Q10825850#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Thap_Nhan_Hindu_temple,_Tuy_Hoa,_Phu_Yen_province,_Vietnam_15.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "nui-ba-ra": {
+    "place": "http://www.wikidata.org/entity/Q5004767",
+    "coordinates": "http://www.wikidata.org/entity/Q5004767#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:C%C3%A1p_Treo_B%C3%A0_R%C3%A1_-_panoramio_(1).jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "nui-chua-chan": {
+    "place": "http://www.wikidata.org/entity/Q2092726",
+    "coordinates": "http://www.wikidata.org/entity/Q2092726#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Chua_Chan_mount..JPG",
+    "reviewedAt": "2026-10-11"
+  },
+  "go-thap": {
+    "place": "http://www.wikidata.org/entity/Q10763514",
+    "coordinates": "http://www.wikidata.org/entity/Q10763514#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Cong_vao_khu_di_tich_go_thap.xa_My_hoa,_huyen_Th%C3%A1p_M%C6%B0%E1%BB%9Di,_%C4%90%E1%BB%93ng_Th%C3%A1p,_Vi%E1%BB%87t_Nam_-_panoramio.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "van-thanh-mieu-cao-lanh": {
+    "place": "http://www.wikidata.org/entity/Q10833431",
+    "coordinates": "http://www.wikidata.org/entity/Q10833431#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:V%C4%83n_mi%E1%BA%BFu_Cao_L%C3%A3nh.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "thap-banh-it": {
+    "place": "http://www.wikidata.org/entity/Q10825825",
+    "coordinates": "http://www.wikidata.org/entity/Q10825825#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:0040323_Thap_Banh_It_complex,_Nhon_Hoa,_Binh_Dinh_Vietnam_001.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "chua-minh-thanh": {
+    "place": "http://www.wikidata.org/entity/Q16480582",
+    "coordinates": "http://www.wikidata.org/entity/Q16480582#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Minh_Thanh_Temple_in_Pleiku.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "vuon-quoc-gia-cat-ba": {
+    "place": "http://www.wikidata.org/entity/Q1537215",
+    "coordinates": "http://www.wikidata.org/entity/Q1537215#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Cat_Ba_national_park.JPG",
+    "reviewedAt": "2026-10-11"
+  },
+  "van-mieu-xich-dang": {
+    "place": "http://www.wikidata.org/entity/Q7698740",
+    "coordinates": "http://www.wikidata.org/entity/Q7698740#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:V%C4%83n_mi%E1%BA%BFu_X%C3%ADch_%C4%90%E1%BA%B1ng_02.JPG",
+    "reviewedAt": "2026-10-11"
+  },
+  "mau-son": {
+    "place": "http://www.wikidata.org/entity/Q6922067",
+    "coordinates": "http://www.wikidata.org/entity/Q6922067#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Mau_Son.JPG",
+    "reviewedAt": "2026-10-11"
+  },
+  "thac-cat-cat": {
+    "place": "http://www.wikidata.org/entity/Q10825640",
+    "coordinates": "http://www.wikidata.org/entity/Q10825640#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Tien_Sa_Waterfall.JPG",
+    "reviewedAt": "2026-10-11"
+  },
+  "dinh-langbiang": {
+    "place": "http://www.wikidata.org/entity/Q3217169",
+    "coordinates": "http://www.wikidata.org/entity/Q3217169#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Lang_biang_au_mois_d%27ao%C3%BBt.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "chua-linh-phuoc": {
+    "place": "http://www.wikidata.org/entity/Q10748461",
+    "coordinates": "http://www.wikidata.org/entity/Q10748461#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Da_Lat_-_Linh_Phuoc_Temple_03.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "vuon-quoc-gia-xuan-son": {
+    "place": "http://www.wikidata.org/entity/Q1749733",
+    "coordinates": "http://www.wikidata.org/entity/Q1749733#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Xuan_Son_3.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "ho-thoi-loi": {
+    "place": "http://www.wikidata.org/entity/Q78334560",
+    "coordinates": "http://www.wikidata.org/entity/Q78334560#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:H%E1%BB%93_Th%E1%BB%9Bi_L%E1%BB%9Bi_(An_H%E1%BA%A3i-L%C3%BD_S%C6%A1n-Qu%E1%BA%A3ng_Ng%C3%A3i)_-_panoramio.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "nui-yen-tu": {
+    "place": "http://www.wikidata.org/entity/Q10802059",
+    "coordinates": "http://www.wikidata.org/entity/Q10802059#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:N%C3%BAi_Y%C3%AAn_T%E1%BB%AD.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "bao-tang-quang-ninh": {
+    "place": "http://www.wikidata.org/entity/Q112182634",
+    "coordinates": "http://www.wikidata.org/entity/Q112182634#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Quang_Ninh_Museum_facade_1.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "hang-thien-duong": {
+    "place": "http://www.wikidata.org/entity/Q43171",
+    "coordinates": "http://www.wikidata.org/entity/Q43171#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:ThienDuongCave1.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "hang-son-doong": {
+    "place": "http://www.wikidata.org/entity/Q44889",
+    "coordinates": "http://www.wikidata.org/entity/Q44889#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Son_Doong_Cave_5.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "thanh-co-quang-tri": {
+    "place": "http://www.wikidata.org/entity/Q10825609",
+    "coordinates": "http://www.wikidata.org/entity/Q10825609#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Th%C3%A0nh_c%E1%BB%95_Qu%E1%BA%A3ng_Tr%E1%BB%8B_4.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "toa-thanh-tay-ninh": {
+    "place": "http://www.wikidata.org/entity/Q10831162",
+    "coordinates": "http://www.wikidata.org/entity/Q10831162#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:T%C3%B2a_Th%C3%A1nh_T%C3%A2y_Ninh_1214.JPG",
+    "reviewedAt": "2026-10-11"
+  },
+  "vuon-quoc-gia-ba-be": {
+    "place": "http://www.wikidata.org/entity/Q1968747",
+    "coordinates": "http://www.wikidata.org/entity/Q1968747#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Ba_Be_Lake_6464.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "lam-kinh": {
+    "place": "http://www.wikidata.org/entity/Q10784247",
+    "coordinates": "http://www.wikidata.org/entity/Q10784247#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Lam_Kinh.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "deo-ma-pi-leng": {
+    "place": "http://www.wikidata.org/entity/Q6949928",
+    "coordinates": "http://www.wikidata.org/entity/Q6949928#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:%C4%90%C3%A8o_M%C3%A3_P%C3%AC_L%C3%A8ng.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "hang-lung-khuy": {
+    "place": "http://www.wikidata.org/entity/Q61130932",
+    "coordinates": "http://www.wikidata.org/entity/Q61130932#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:%C4%90%E1%BB%99ng_L%C3%B9ng_Kh%C3%BAy_(47694355042).jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "vuon-quoc-gia-u-minh-thuong": {
+    "place": "http://www.wikidata.org/entity/Q1536917",
+    "coordinates": "http://www.wikidata.org/entity/Q1536917#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:RungUMinh1.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "oc-eo": {
+    "place": "http://www.wikidata.org/entity/Q2344822",
+    "coordinates": "http://www.wikidata.org/entity/Q2344822#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Ruins_of_Nam_Linh_Son_archaeological_site,_Oc_Eo.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "thap-vinh-hung": {
+    "place": "http://www.wikidata.org/entity/Q109438230",
+    "coordinates": "http://www.wikidata.org/entity/Q109438230#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Vinh_Hung_tower,_Vinh_Loi,_Bac_Lieu.jpg",
+    "reviewedAt": "2026-10-11"
+  },
+  "vuon-quoc-gia-u-minh-ha": {
+    "place": "http://www.wikidata.org/entity/Q3895714",
+    "coordinates": "http://www.wikidata.org/entity/Q3895714#P625",
+    "photo": "https://commons.wikimedia.org/wiki/File:Chu%E1%BB%91i_t%E1%BA%A1i_r%E1%BB%ABng_U_Minh_h%E1%BA%A1.jpg",
+    "reviewedAt": "2026-10-11"
+  }
+}

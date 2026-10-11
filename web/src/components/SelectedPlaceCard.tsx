@@ -4,6 +4,7 @@ import { formatDistance } from '@/lib/geo';
 import type { Meta, PlaceSummary } from '@/lib/types';
 import { Icon } from './Icon';
 import { PlaceImage } from './PlaceImage';
+import { PhotoAttribution } from './PhotoAttribution';
 import { CATEGORY_STYLE, DemoBadge } from './ui';
 
 /** Thẻ tóm tắt khi chọn marker trên bản đồ. */
@@ -13,7 +14,7 @@ export function SelectedPlaceCard({ place: p, meta, onClose }: { place: PlaceSum
   return (
     <div role="dialog" aria-label={`Thông tin ${p.name}`} className="rounded-3xl bg-surface/95 p-3 shadow-2xl ring-1 ring-line backdrop-blur">
       <div className="flex gap-3">
-        <PlaceImage place={p} className="size-16 shrink-0 rounded-2xl" />
+        <PlaceImage place={p} credit="none" className="size-16 shrink-0 rounded-2xl" />
         <div className="min-w-0 flex-1">
           <p className={`text-xs font-semibold ${CATEGORY_STYLE[p.category].text}`}>
             {cat?.label}
@@ -27,6 +28,7 @@ export function SelectedPlaceCard({ place: p, meta, onClose }: { place: PlaceSum
           <Icon name="x" />
         </button>
       </div>
+      <PhotoAttribution photo={p.photo} className="mt-2" />
       <div className="mt-3 grid grid-cols-3 gap-2 whitespace-nowrap text-sm font-semibold">
         <Link href={`/dia-diem/${p.slug}`} className="rounded-2xl bg-brand-600 px-3 py-2.5 text-center text-white hover:bg-brand-700">
           Chi tiết

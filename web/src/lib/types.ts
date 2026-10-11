@@ -71,12 +71,14 @@ export interface Province {
   centerLongitude: number | null;
   placeCount: number;
   byCategory: Partial<Record<Category, number>>;
+  coverPhoto: Photo | null;
 }
 
 export interface Meta {
   categories: { id: Category; label: string; icon: string }[];
   tags: Record<string, string>;
   provider: ProviderInfo;
+  googleSearchAvailable: boolean;
   cheapMaxVnd: number;
   defaultRadiusKm: number;
 }
@@ -125,6 +127,8 @@ export interface Photo {
   url: string;
   pageUrl: string;
   author: string;
+  authorUrl?: string | null;
+  authorAvatarUrl?: string | null;
   license: string;
   licenseUrl?: string | null;
   /** place = ảnh của chính địa điểm; topic = ảnh món ăn/chủ đề minh họa. */
